@@ -1,0 +1,400 @@
+Testing Cyclic Codes of length 15, try_0
+Quantum Tanner Code over Cyclic group of order 15 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [135, 21, 4, 6]
+Testing Cyclic Codes of length 15, try_1
+Quantum Tanner Code over Cyclic group of order 15 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [45, 9, 4, 6]
+Testing Cyclic Codes of length 15, try_2
+Quantum Tanner Code over Cyclic group of order 15 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [135, 21, 4, 6]
+Testing Cyclic Codes of length 15, try_3
+Quantum Tanner Code over Cyclic group of order 15 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [45, 9, 4, 6]
+Testing Cyclic Codes of length 15, try_4
+Quantum Tanner Code over Cyclic group of order 15 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [45, 9, 4, 6]
+Testing Cyclic Codes of length 15, try_5
+Quantum Tanner Code over Cyclic group of order 15 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [45, 9, 4, 6]
+Testing Cyclic Codes of length 15, try_6
+Quantum Tanner Code over Cyclic group of order 15 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [45, 9, 4, 6]
+Testing Cyclic Codes of length 15, try_7
+Quantum Tanner Code over Cyclic group of order 15 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [135, 21, 4, 6]
+Testing Cyclic Codes of length 15, try_8
+Quantum Tanner Code over Cyclic group of order 15 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [135, 25, 4, 6]
+Testing Cyclic Codes of length 15, try_9
+Quantum Tanner Code over Cyclic group of order 15 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [135, 21, 4, 6]
+Testing Cyclic Codes of length 16, try_0
+Quantum Tanner Code over Cyclic group of order 16 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [144, 21, 4, 6]
+Testing Cyclic Codes of length 16, try_1
+Quantum Tanner Code over Cyclic group of order 16 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [144, 23, 4, 6]
+Testing Cyclic Codes of length 16, try_2
+Quantum Tanner Code over Cyclic group of order 16 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [144, 23, 4, 6]
+Testing Cyclic Codes of length 16, try_3
+Quantum Tanner Code over Cyclic group of order 16 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [144, 21, 4, 6]
+Testing Cyclic Codes of length 16, try_4
+Quantum Tanner Code over Cyclic group of order 16 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [72, 13, 4, 6]
+Testing Cyclic Codes of length 16, try_5
+Quantum Tanner Code over Cyclic group of order 16 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [72, 12, 4, 6]
+Testing Cyclic Codes of length 16, try_6
+Quantum Tanner Code over Cyclic group of order 16 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [72, 13, 4, 6]
+Testing Cyclic Codes of length 16, try_7
+Quantum Tanner Code over Cyclic group of order 16 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [144, 23, 4, 6]
+Testing Cyclic Codes of length 16, try_8
+Quantum Tanner Code over Cyclic group of order 16 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [72, 12, 4, 6]
+Testing Cyclic Codes of length 16, try_9
+Quantum Tanner Code over Cyclic group of order 16 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [72, 12, 3, 6]
+Testing Cyclic Codes of length 17, try_0
+Quantum Tanner Code over Cyclic group of order 17 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [153, 21, 4, 6]
+Testing Cyclic Codes of length 17, try_1
+Quantum Tanner Code over Cyclic group of order 17 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [153, 21, 4, 6]
+Testing Cyclic Codes of length 17, try_2
+Quantum Tanner Code over Cyclic group of order 17 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [153, 21, 4, 6]
+Testing Cyclic Codes of length 17, try_3
+Quantum Tanner Code over Cyclic group of order 17 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [153, 21, 4, 6]
+Testing Cyclic Codes of length 17, try_4
+Quantum Tanner Code over Cyclic group of order 17 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [153, 21, 3, 6]
+Testing Cyclic Codes of length 17, try_5
+Quantum Tanner Code over Cyclic group of order 17 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [153, 21, 4, 6]
+Testing Cyclic Codes of length 17, try_6
+Quantum Tanner Code over Cyclic group of order 17 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [153, 21, 3, 6]
+Testing Cyclic Codes of length 17, try_7
+Quantum Tanner Code over Cyclic group of order 17 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [153, 21, 3, 6]
+Testing Cyclic Codes of length 17, try_8
+Quantum Tanner Code over Cyclic group of order 17 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [153, 21, 4, 6]
+Testing Cyclic Codes of length 17, try_9
+Quantum Tanner Code over Cyclic group of order 17 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [153, 21, 3, 6]
+Testing Cyclic Codes of length 18, try_0
+Quantum Tanner Code over Cyclic group of order 18 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [81, 15, 4, 6]
+Testing Cyclic Codes of length 18, try_1
+Quantum Tanner Code over Cyclic group of order 18 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [162, 23, 4, 6]
+Testing Cyclic Codes of length 18, try_2
+Quantum Tanner Code over Cyclic group of order 18 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [162, 23, 4, 6]
+Testing Cyclic Codes of length 18, try_3
+Quantum Tanner Code over Cyclic group of order 18 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [81, 13, 4, 6]
+Testing Cyclic Codes of length 18, try_4
+Quantum Tanner Code over Cyclic group of order 18 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [162, 23, 4, 6]
+Testing Cyclic Codes of length 18, try_5
+Quantum Tanner Code over Cyclic group of order 18 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [162, 30, 4, 6]
+Testing Cyclic Codes of length 18, try_6
+Quantum Tanner Code over Cyclic group of order 18 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [162, 26, 4, 6]
+Testing Cyclic Codes of length 18, try_7
+Quantum Tanner Code over Cyclic group of order 18 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [162, 23, 4, 6]
+Testing Cyclic Codes of length 18, try_8
+Quantum Tanner Code over Cyclic group of order 18 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [162, 22, 3, 6]
+Testing Cyclic Codes of length 18, try_9
+Quantum Tanner Code over Cyclic group of order 18 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [162, 30, 4, 6]
+Testing Cyclic Codes of length 19, try_0
+Quantum Tanner Code over Cyclic group of order 19 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [171, 23, 4, 6]
+Testing Cyclic Codes of length 19, try_1
+Quantum Tanner Code over Cyclic group of order 19 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [171, 23, 4, 6]
+Testing Cyclic Codes of length 19, try_2
+Quantum Tanner Code over Cyclic group of order 19 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [171, 23, 4, 6]
+Testing Cyclic Codes of length 19, try_3
+Quantum Tanner Code over Cyclic group of order 19 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [171, 23, 4, 6]
+Testing Cyclic Codes of length 19, try_4
+Quantum Tanner Code over Cyclic group of order 19 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [171, 23, 3, 6]
+Testing Cyclic Codes of length 19, try_5
+Quantum Tanner Code over Cyclic group of order 19 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [171, 23, 4, 6]
+Testing Cyclic Codes of length 19, try_6
+Quantum Tanner Code over Cyclic group of order 19 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [171, 23, 3, 6]
+Testing Cyclic Codes of length 19, try_7
+Quantum Tanner Code over Cyclic group of order 19 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [171, 23, 3, 6]
+Testing Cyclic Codes of length 19, try_8
+Quantum Tanner Code over Cyclic group of order 19 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [171, 23, 4, 6]
+Testing Cyclic Codes of length 19, try_9
+Quantum Tanner Code over Cyclic group of order 19 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [171, 23, 4, 6]
+Testing Cyclic Codes of length 20, try_0
+Quantum Tanner Code over Cyclic group of order 20 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [180, 28, 4, 6]
+Testing Cyclic Codes of length 20, try_1
+Quantum Tanner Code over Cyclic group of order 20 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [180, 24, 4, 6]
+Testing Cyclic Codes of length 20, try_2
+Quantum Tanner Code over Cyclic group of order 20 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [180, 27, 4, 6]
+Testing Cyclic Codes of length 20, try_3
+Quantum Tanner Code over Cyclic group of order 20 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [90, 14, 4, 6]
+Testing Cyclic Codes of length 20, try_4
+Quantum Tanner Code over Cyclic group of order 20 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [180, 24, 4, 6]
+Testing Cyclic Codes of length 20, try_5
+Quantum Tanner Code over Cyclic group of order 20 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [180, 24, 4, 6]
+Testing Cyclic Codes of length 20, try_6
+Quantum Tanner Code over Cyclic group of order 20 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [180, 27, 4, 6]
+Testing Cyclic Codes of length 20, try_7
+Quantum Tanner Code over Cyclic group of order 20 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [180, 27, 4, 6]
+Testing Cyclic Codes of length 20, try_8
+Quantum Tanner Code over Cyclic group of order 20 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [90, 14, 4, 6]
+Testing Cyclic Codes of length 20, try_9
+Quantum Tanner Code over Cyclic group of order 20 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [180, 25, 4, 6]
+Testing Cyclic Codes of length 21, try_0
+Quantum Tanner Code over Cyclic group of order 21 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [63, 11, 4, 6]
+Testing Cyclic Codes of length 21, try_1
+Quantum Tanner Code over Cyclic group of order 21 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [63, 11, 4, 6]
+Testing Cyclic Codes of length 21, try_2
+Quantum Tanner Code over Cyclic group of order 21 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [63, 11, 3, 6]
+Testing Cyclic Codes of length 21, try_3
+Quantum Tanner Code over Cyclic group of order 21 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [189, 27, 4, 6]
+Testing Cyclic Codes of length 21, try_4
+Quantum Tanner Code over Cyclic group of order 21 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [189, 27, 4, 6]
+Testing Cyclic Codes of length 21, try_5
+Quantum Tanner Code over Cyclic group of order 21 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [63, 11, 3, 6]
+Testing Cyclic Codes of length 21, try_6
+Quantum Tanner Code over Cyclic group of order 21 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [63, 11, 3, 6]
+Testing Cyclic Codes of length 21, try_7
+Quantum Tanner Code over Cyclic group of order 21 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [189, 27, 4, 6]
+Testing Cyclic Codes of length 21, try_8
+Quantum Tanner Code over Cyclic group of order 21 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [63, 11, 4, 6]
+Testing Cyclic Codes of length 21, try_9
+Quantum Tanner Code over Cyclic group of order 21 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [189, 25, 4, 6]
+Testing Cyclic Codes of length 22, try_0
+Quantum Tanner Code over Cyclic group of order 22 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [198, 27, 4, 6]
+Testing Cyclic Codes of length 22, try_1
+Quantum Tanner Code over Cyclic group of order 22 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [198, 30, 4, 6]
+Testing Cyclic Codes of length 22, try_2
+Quantum Tanner Code over Cyclic group of order 22 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [198, 27, 4, 6]
+Testing Cyclic Codes of length 22, try_3
+Quantum Tanner Code over Cyclic group of order 22 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [198, 26, 3, 6]
+Testing Cyclic Codes of length 22, try_4
+Quantum Tanner Code over Cyclic group of order 22 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [198, 27, 4, 6]
+Testing Cyclic Codes of length 22, try_5
+Quantum Tanner Code over Cyclic group of order 22 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [198, 26, 4, 6]
+Testing Cyclic Codes of length 22, try_6
+Quantum Tanner Code over Cyclic group of order 22 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [198, 30, 4, 6]
+Testing Cyclic Codes of length 22, try_7
+Quantum Tanner Code over Cyclic group of order 22 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [198, 27, 4, 6]
+Testing Cyclic Codes of length 22, try_8
+Quantum Tanner Code over Cyclic group of order 22 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [198, 30, 4, 6]
+Testing Cyclic Codes of length 22, try_9
+Quantum Tanner Code over Cyclic group of order 22 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [198, 26, 4, 6]
+Testing Cyclic Codes of length 23, try_0
+Quantum Tanner Code over Cyclic group of order 23 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [207, 27, 4, 6]
+Testing Cyclic Codes of length 23, try_1
+Quantum Tanner Code over Cyclic group of order 23 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [207, 27, 3, 6]
+Testing Cyclic Codes of length 23, try_2
+Quantum Tanner Code over Cyclic group of order 23 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [207, 27, 6, 6]
+Testing Cyclic Codes of length 23, try_3
+Quantum Tanner Code over Cyclic group of order 23 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [207, 27, 4, 6]
+Testing Cyclic Codes of length 23, try_4
+Quantum Tanner Code over Cyclic group of order 23 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [207, 27, 6, 6]
+Testing Cyclic Codes of length 23, try_5
+Quantum Tanner Code over Cyclic group of order 23 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [207, 27, 4, 6]
+Testing Cyclic Codes of length 23, try_6
+Quantum Tanner Code over Cyclic group of order 23 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [207, 27, 3, 6]
+Testing Cyclic Codes of length 23, try_7
+Quantum Tanner Code over Cyclic group of order 23 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [207, 27, 3, 6]
+Testing Cyclic Codes of length 23, try_8
+Quantum Tanner Code over Cyclic group of order 23 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [207, 27, 4, 6]
+Testing Cyclic Codes of length 23, try_9
+Quantum Tanner Code over Cyclic group of order 23 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [207, 27, 4, 6]
+Testing Cyclic Codes of length 24, try_0
+Quantum Tanner Code over Cyclic group of order 24 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [216, 29, 4, 6]
+Testing Cyclic Codes of length 24, try_1
+Quantum Tanner Code over Cyclic group of order 24 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [216, 30, 4, 6]
+Testing Cyclic Codes of length 24, try_2
+Quantum Tanner Code over Cyclic group of order 24 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [216, 29, 4, 6]
+Testing Cyclic Codes of length 24, try_3
+Quantum Tanner Code over Cyclic group of order 24 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [216, 30, 4, 6]
+Testing Cyclic Codes of length 24, try_4
+Quantum Tanner Code over Cyclic group of order 24 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [216, 30, 8, 6]
+Testing Cyclic Codes of length 24, try_5
+Quantum Tanner Code over Cyclic group of order 24 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [216, 37, 4, 6]
+Testing Cyclic Codes of length 24, try_6
+Quantum Tanner Code over Cyclic group of order 24 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [216, 28, 3, 6]
+Testing Cyclic Codes of length 24, try_7
+Quantum Tanner Code over Cyclic group of order 24 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [216, 35, 4, 6]
+Testing Cyclic Codes of length 24, try_8
+Quantum Tanner Code over Cyclic group of order 24 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [216, 35, 4, 6]
+Testing Cyclic Codes of length 24, try_9
+Quantum Tanner Code over Cyclic group of order 24 with 3 generators
+Inner Code is Hamming and its dual of rank 2
+Final code params: [216, 35, 4, 6]

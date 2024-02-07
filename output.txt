@@ -1,0 +1,8 @@
+Testing Cyclic Codes of length 9, try_0
+Quantum Tanner Code over Cyclic group of order 9 with 7 generators
+Inner Code is Hamming and its dual of rank 3
+Final code params: [441, 33, 30, 18]
+Testing Cyclic Codes of length 10, try_0
+Quantum Tanner Code over Cyclic group of order 10 with 7 generators
+Inner Code is Hamming and its dual of rank 3
+Final code params: [490, 35, 21, 18]

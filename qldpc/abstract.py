@@ -284,7 +284,8 @@ class Group:
         seed_new = seed
         while True:  # sounds dangerous, but bear with me
             member = GroupMember(self.random(seed=seed_new))
-            seed_new = seed_new + 1
+            if seed_new:
+                seed_new = seed_new + 1
             if exclude_identity and member == self.identity:
                 continue
 

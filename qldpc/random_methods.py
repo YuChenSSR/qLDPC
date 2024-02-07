@@ -46,9 +46,9 @@ def random_cyclicgens(
     subset_b = cyclegroup.random_symmetric_subset(degree, seed=seed)
     print(f"Quantum Tanner Code over Cyclic group of order {order} with {degree} generators")
     if isinstance(order, int):
-        print("Generators")
+        #print("Generators")
         generators = np.array([[p(0) for p in subset_a], [p(0) for p in subset_b]])
-        print(generators)
+        #print(generators)
     return cyclegroup, subset_a, subset_b, generators
 
 
@@ -82,9 +82,9 @@ def random_basecodes(
         print("Inner Code is random linear and its dual")
         code_a = ClassicalCode.random(blocklength, int(rate * blocklength), field)
         code_b = ~code_a
-    print("Inner code params:")
-    print(code_a.get_code_params())
-    print(code_b.get_code_params())
+    # print("Inner code params:")
+    # print(code_a.get_code_params())
+    # print(code_b.get_code_params())
     return code_a, code_b
 
 
@@ -120,7 +120,7 @@ def random_cyclicQTcode(
     ]
     print("Final code params:", params)
     if save_file:
-        np.savez_compressed(save_file, gen = generators)
+        np.savez_compressed(save_file, params = params, gen = generators)
     return tannercode
 
 

@@ -1,0 +1,7 @@
+Testing Cyclic Codes of length 25, try_0
+Quantum Tanner Code over Cyclic group of order 25 with 15 generators
+Inner Code is Hamming and its dual of rank 4
+Final code params: [5625, 1313, 44, 56]
+Testing Cyclic Codes of length 25, try_1
+Quantum Tanner Code over Cyclic group of order 25 with 15 generators
+Inner Code is Hamming and its dual of rank 4
