@@ -28,7 +28,7 @@ from qldpc.codes import ClassicalCode, QTCode
 
 
 def random_cyclicgens(
-    order: int | Sequence[int], degree: int
+    order: int | Sequence[int], degree: int, seed: int | None = None
 ) -> tuple[Group, set[GroupMember], set[GroupMember]]:
     """Generates a pair of random subsets of a cyclic group or a product of cyclic groups.
     Order: Can be an integer k --> Z_k or a tuple,
@@ -42,14 +42,14 @@ def random_cyclicgens(
         cyclegroup = CyclicGroup(order[0])
         for i in order[1:]:
             cyclegroup = cyclegroup * CyclicGroup(i)
-    subset_a = cyclegroup.random_symmetric_subset(degree)
-    subset_b = cyclegroup.random_symmetric_subset(degree)
+    subset_a = cyclegroup.random_symmetric_subset(degree, seed=seed)
+    subset_b = cyclegroup.random_symmetric_subset(degree, seed=seed)
     print(f"Quantum Tanner Code over Cyclic group of order {order} with {degree} generators")
     if isinstance(order, int):
         print("Generators")
-        print([p(0) for p in subset_a])
-        print([p(0) for p in subset_b])
-    return cyclegroup, subset_a, subset_b
+        generators = np.array([[p(0) for p in subset_a], [p(0) for p in subset_b]])
+        print(generators)
+    return cyclegroup, subset_a, subset_b, generators
 
 
 def random_lineargens(
@@ -67,7 +67,7 @@ def random_basecodes(
     blocklength: int,
     field: int = 2,
     hamming: int | None = None,
-    save: int | None = None,
+    save_file: str | None = None,
 ) -> tuple[ClassicalCode, ClassicalCode]:
     """Outputs a pair of codes C_A, C_B such that
     dim(C_A) + dim(C_B) = blocklength
@@ -92,7 +92,8 @@ def random_cyclicQTcode(
     order: int | Sequence[int],
     field: int = 2,
     hamming: int | None = None,
-    save: bool = False,
+    save_file: str | None = None,
+    seed: int | None = None
 ) -> QTCode:
     """Constructs a Quantum Tanner Code over Cyclic group of given order
     with random generators.
@@ -108,8 +109,8 @@ def random_cyclicQTcode(
         deg = 2**hamming - 1
         assert deg <= size
 
-    _, subset_a, subset_b = random_cyclicgens(order, deg)
-    code_a, code_b = random_basecodes(deg, field, hamming=hamming, save=save)
+    _, subset_a, subset_b, generators = random_cyclicgens(order, deg, seed=seed)
+    code_a, code_b = random_basecodes(deg, field, hamming=hamming, save_file=save_file)
     tannercode = QTCode(subset_a, subset_b, code_a, code_b, twopartite=False)
     params = [
         tannercode.num_qubits,
@@ -118,6 +119,8 @@ def random_cyclicQTcode(
         tannercode.get_weight(),
     ]
     print("Final code params:", params)
+    if save_file:
+        np.savez_compressed(save_file, gen = generators)
     return tannercode
 
 
@@ -126,7 +129,7 @@ def random_linearQTcode(
     field: int = 2,
     dimension: int = 2,
     hamming: int | None = None,
-    save: bool = False,
+    save_file: str | None = None,
 ) -> QTCode:
     """Constructs a Quantum Tanner Code over SpecialLinear group of given order
     with random generators.
@@ -136,7 +139,7 @@ def random_linearQTcode(
     else:
         deg = 9
     _, subset_a, subset_b = random_lineargens(sl_field, deg, dimension)
-    code_a, code_b = random_basecodes(deg, field, hamming=hamming, save=save)
+    code_a, code_b = random_basecodes(deg, field, hamming=hamming, save_file=save_file)
     tannercode = QTCode(subset_a, subset_b, code_a, code_b)
     params = [
         tannercode.num_qubits,
@@ -146,18 +149,3 @@ def random_linearQTcode(
     ]
     print("Final code params:", params)
     return tannercode
-
-
-np.set_printoptions(linewidth=200)
-
-blocklength = 18
-field = 2
-sl_field = 4
-random_cyclicQTcode(blocklength, field, hamming=3)
-#random_linearQTcode(sl_field, hamming=3)
-# if tannercode.get_distance(upper=10, ensure_nontrivial=False) > 20:
-#    np.save
-# print(np.any(tannercode.matrix))
-""" Experiment with cyclic codes upto like 20?
-Fix base codes to be Hamming[7,4] and its dual [7,3]
-"""

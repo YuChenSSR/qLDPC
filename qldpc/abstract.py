@@ -281,8 +281,10 @@ class Group:
 
         singles = set()  # group members equal to their own inverse
         doubles = set()  # pairs of group members and their inverses
+        seed_new = seed
         while True:  # sounds dangerous, but bear with me
-            member = GroupMember(self.random())
+            member = GroupMember(self.random(seed=seed_new))
+            seed_new = seed_new + 1
             if exclude_identity and member == self.identity:
                 continue
 
