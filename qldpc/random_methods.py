@@ -67,6 +67,8 @@ def random_basecodes(
     blocklength: int,
     field: int = 2,
     hamming: int | None = None,
+    CordaroWagner: bool = False,
+    RepSum: bool = False,
     save_file: str | None = None,
 ) -> tuple[ClassicalCode, ClassicalCode]:
     """Outputs a pair of codes C_A, C_B such that
@@ -77,14 +79,22 @@ def random_basecodes(
         print(f"Inner Code is Hamming and its dual of rank {hamming}")
         code_a = ClassicalCode.hamming(hamming, field)
         code_b = ~code_a
+    elif CordaroWagner:
+        assert blocklength in [5,6]
+        code_a = ClassicalCode.CordaroWagner(blocklength,field = 2)
+        code_b = ~code_a
+    elif RepSum:
+        assert blocklength in [5,6]
+        code_a = ClassicalCode.RepSum(blocklength, field = 2)
+        code_b = ~code_a
     else:
-        rate = 0.2
+        rate = 0.5
         print("Inner Code is random linear and its dual")
         code_a = ClassicalCode.random(blocklength, int(rate * blocklength), field)
         code_b = ~code_a
-    # print("Inner code params:")
-    # print(code_a.get_code_params())
-    # print(code_b.get_code_params())
+    print("Inner code params:")
+    print(code_a.get_code_params())
+    print(code_b.get_code_params())
     return code_a, code_b
 
 
@@ -92,6 +102,8 @@ def random_cyclicQTcode(
     order: int | Sequence[int],
     field: int = 2,
     hamming: int | None = None,
+    CordaroWagner: bool = False,
+    RepSum: bool = False,
     save_file: str | None = None,
     seed: int | None = None
 ) -> QTCode:
@@ -103,24 +115,32 @@ def random_cyclicQTcode(
     else:
         size = np.prod(np.array(order))
 
-    if hamming is None:
-        deg = int(2 * np.log2(size))
-    else:
+    if hamming:
         deg = 2**hamming - 1
         assert deg <= size
-
+    
+    elif CordaroWagner or RepSum:
+        deg = 5
+    
+    else:
+        deg = 5
     _, subset_a, subset_b, generators = random_cyclicgens(order, deg, seed=seed)
-    code_a, code_b = random_basecodes(deg, field, hamming=hamming, save_file=save_file)
+    code_a, code_b = random_basecodes(deg, field, hamming=hamming, CordaroWagner=CordaroWagner, RepSum=RepSum, save_file=save_file)
+    #code_a = ClassicalCode.repetition(deg)
+    #code_b = ~code_a
     tannercode = QTCode(subset_a, subset_b, code_a, code_b, twopartite=False)
     params = [
         tannercode.num_qubits,
         tannercode.dimension,
-        tannercode.get_distance(upper=5, ensure_nontrivial=False),
+        tannercode.get_distance(upper=500, ensure_nontrivial=False),
         tannercode.get_weight(),
     ]
     print("Final code params:", params)
     if save_file:
-        np.savez_compressed(save_file, params = params, gen = generators)
+        if hamming or CordaroWagner or RepSum:
+            np.savez_compressed(save_file, params = params, gen = generators)
+        else:
+            np.savez_compressed(save_file, params = params, gen = generators, code_a = code_a.matrix, code_b = code_b.matrix)
     return tannercode
 
 
@@ -137,7 +157,7 @@ def random_linearQTcode(
     if hamming:
         deg = 2**hamming - 1
     else:
-        deg = 9
+        deg = 5
     _, subset_a, subset_b = random_lineargens(sl_field, deg, dimension)
     code_a, code_b = random_basecodes(deg, field, hamming=hamming, save_file=save_file)
     tannercode = QTCode(subset_a, subset_b, code_a, code_b)

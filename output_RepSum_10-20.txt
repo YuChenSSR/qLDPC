@@ -1,0 +1,900 @@
+Testing Cyclic Codes of length 10, try_0
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 10, try_1
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 28, 9, 9]
+Testing Cyclic Codes of length 10, try_2
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 10, try_3
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 10, try_4
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 26, 12, 9]
+Testing Cyclic Codes of length 10, try_5
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 10, try_6
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 8, 9]
+Testing Cyclic Codes of length 10, try_7
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 8, 9]
+Testing Cyclic Codes of length 10, try_8
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 6, 9]
+Testing Cyclic Codes of length 10, try_9
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 10, try_10
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 28, 12, 9]
+Testing Cyclic Codes of length 10, try_11
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 10, try_12
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 12, 9]
+Testing Cyclic Codes of length 10, try_13
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 8, 9]
+Testing Cyclic Codes of length 10, try_14
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 10, try_15
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 8, 9]
+Testing Cyclic Codes of length 10, try_16
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 10, try_17
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 10, try_18
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 28, 12, 9]
+Testing Cyclic Codes of length 10, try_19
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 12, 9]
+Testing Cyclic Codes of length 10, try_20
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 10, try_21
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 10, try_22
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 20, 10, 9]
+Testing Cyclic Codes of length 10, try_23
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 8, 9]
+Testing Cyclic Codes of length 10, try_24
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 9, 9]
+Testing Cyclic Codes of length 10, try_25
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 20, 13, 9]
+Testing Cyclic Codes of length 10, try_26
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 26, 8, 9]
+Testing Cyclic Codes of length 10, try_27
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 6, 9]
+Testing Cyclic Codes of length 10, try_28
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 22, 10, 9]
+Testing Cyclic Codes of length 10, try_29
+Quantum Tanner Code over Cyclic group of order 10 with 6 generators
+Final code params: [360, 36, 10, 9]
+Testing Cyclic Codes of length 11, try_0
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 9, 9]
+Testing Cyclic Codes of length 11, try_1
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_2
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 9, 9]
+Testing Cyclic Codes of length 11, try_3
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 12, 9]
+Testing Cyclic Codes of length 11, try_4
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 8, 9]
+Testing Cyclic Codes of length 11, try_5
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_6
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 13, 9]
+Testing Cyclic Codes of length 11, try_7
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 9, 9]
+Testing Cyclic Codes of length 11, try_8
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 12, 9]
+Testing Cyclic Codes of length 11, try_9
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_10
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_11
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 9, 9]
+Testing Cyclic Codes of length 11, try_12
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 9, 9]
+Testing Cyclic Codes of length 11, try_13
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 9, 9]
+Testing Cyclic Codes of length 11, try_14
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 9, 9]
+Testing Cyclic Codes of length 11, try_15
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_16
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 8, 9]
+Testing Cyclic Codes of length 11, try_17
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 13, 9]
+Testing Cyclic Codes of length 11, try_18
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 9, 9]
+Testing Cyclic Codes of length 11, try_19
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_20
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_21
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_22
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 9, 9]
+Testing Cyclic Codes of length 11, try_23
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 9, 9]
+Testing Cyclic Codes of length 11, try_24
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_25
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_26
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_27
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 9, 9]
+Testing Cyclic Codes of length 11, try_28
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 11, try_29
+Quantum Tanner Code over Cyclic group of order 11 with 6 generators
+Final code params: [396, 38, 10, 9]
+Testing Cyclic Codes of length 12, try_0
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 10, 9]
+Testing Cyclic Codes of length 12, try_1
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 24, 13, 9]
+Testing Cyclic Codes of length 12, try_2
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 8, 9]
+Testing Cyclic Codes of length 12, try_3
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 6, 9]
+Testing Cyclic Codes of length 12, try_4
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 28, 9, 9]
+Testing Cyclic Codes of length 12, try_5
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 24, 15, 9]
+Testing Cyclic Codes of length 12, try_6
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 32, 8, 9]
+Testing Cyclic Codes of length 12, try_7
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 44, 12, 9]
+Testing Cyclic Codes of length 12, try_8
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 44, 12, 9]
+Testing Cyclic Codes of length 12, try_9
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 24, 12, 9]
+Testing Cyclic Codes of length 12, try_10
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 8, 9]
+Testing Cyclic Codes of length 12, try_11
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 44, 12, 9]
+Testing Cyclic Codes of length 12, try_12
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 6, 9]
+Testing Cyclic Codes of length 12, try_13
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 8, 9]
+Testing Cyclic Codes of length 12, try_14
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 36, 9, 9]
+Testing Cyclic Codes of length 12, try_15
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 9, 9]
+Testing Cyclic Codes of length 12, try_16
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 10, 9]
+Testing Cyclic Codes of length 12, try_17
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 28, 8, 9]
+Testing Cyclic Codes of length 12, try_18
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 12, 9]
+Testing Cyclic Codes of length 12, try_19
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 24, 9, 9]
+Testing Cyclic Codes of length 12, try_20
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 24, 11, 9]
+Testing Cyclic Codes of length 12, try_21
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 44, 9, 9]
+Testing Cyclic Codes of length 12, try_22
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 8, 9]
+Testing Cyclic Codes of length 12, try_23
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 56, 6, 9]
+Testing Cyclic Codes of length 12, try_24
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 9, 9]
+Testing Cyclic Codes of length 12, try_25
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 40, 6, 9]
+Testing Cyclic Codes of length 12, try_26
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 32, 12, 9]
+Testing Cyclic Codes of length 12, try_27
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 24, 13, 9]
+Testing Cyclic Codes of length 12, try_28
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 44, 12, 9]
+Testing Cyclic Codes of length 12, try_29
+Quantum Tanner Code over Cyclic group of order 12 with 6 generators
+Final code params: [432, 28, 11, 9]
+Testing Cyclic Codes of length 13, try_0
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 15, 9]
+Testing Cyclic Codes of length 13, try_1
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 10, 9]
+Testing Cyclic Codes of length 13, try_2
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 9, 9]
+Testing Cyclic Codes of length 13, try_3
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 11, 9]
+Testing Cyclic Codes of length 13, try_4
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 12, 9]
+Testing Cyclic Codes of length 13, try_5
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 9, 9]
+Testing Cyclic Codes of length 13, try_6
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 9, 9]
+Testing Cyclic Codes of length 13, try_7
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 10, 9]
+Testing Cyclic Codes of length 13, try_8
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 12, 9]
+Testing Cyclic Codes of length 13, try_9
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 10, 9]
+Testing Cyclic Codes of length 13, try_10
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 12, 9]
+Testing Cyclic Codes of length 13, try_11
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 9, 9]
+Testing Cyclic Codes of length 13, try_12
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 12, 9]
+Testing Cyclic Codes of length 13, try_13
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 10, 9]
+Testing Cyclic Codes of length 13, try_14
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 12, 9]
+Testing Cyclic Codes of length 13, try_15
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 9, 9]
+Testing Cyclic Codes of length 13, try_16
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 9, 9]
+Testing Cyclic Codes of length 13, try_17
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 9, 9]
+Testing Cyclic Codes of length 13, try_18
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 9, 9]
+Testing Cyclic Codes of length 13, try_19
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 10, 9]
+Testing Cyclic Codes of length 13, try_20
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 12, 9]
+Testing Cyclic Codes of length 13, try_21
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 12, 9]
+Testing Cyclic Codes of length 13, try_22
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 9, 9]
+Testing Cyclic Codes of length 13, try_23
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 10, 9]
+Testing Cyclic Codes of length 13, try_24
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 13, 9]
+Testing Cyclic Codes of length 13, try_25
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 12, 9]
+Testing Cyclic Codes of length 13, try_26
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 10, 9]
+Testing Cyclic Codes of length 13, try_27
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 9, 9]
+Testing Cyclic Codes of length 13, try_28
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 10, 9]
+Testing Cyclic Codes of length 13, try_29
+Quantum Tanner Code over Cyclic group of order 13 with 6 generators
+Final code params: [468, 42, 10, 9]
+Testing Cyclic Codes of length 14, try_0
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 12, 9]
+Testing Cyclic Codes of length 14, try_1
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 48, 13, 9]
+Testing Cyclic Codes of length 14, try_2
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 9, 9]
+Testing Cyclic Codes of length 14, try_3
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 9, 9]
+Testing Cyclic Codes of length 14, try_4
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 10, 9]
+Testing Cyclic Codes of length 14, try_5
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 12, 9]
+Testing Cyclic Codes of length 14, try_6
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 48, 13, 9]
+Testing Cyclic Codes of length 14, try_7
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 8, 9]
+Testing Cyclic Codes of length 14, try_8
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 10, 9]
+Testing Cyclic Codes of length 14, try_9
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 36, 10, 9]
+Testing Cyclic Codes of length 14, try_10
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 20, 11, 9]
+Testing Cyclic Codes of length 14, try_11
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 13, 9]
+Testing Cyclic Codes of length 14, try_12
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 6, 9]
+Testing Cyclic Codes of length 14, try_13
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 22, 12, 9]
+Testing Cyclic Codes of length 14, try_14
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 12, 9]
+Testing Cyclic Codes of length 14, try_15
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 10, 9]
+Testing Cyclic Codes of length 14, try_16
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 12, 9]
+Testing Cyclic Codes of length 14, try_17
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 12, 9]
+Testing Cyclic Codes of length 14, try_18
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 10, 9]
+Testing Cyclic Codes of length 14, try_19
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 9, 9]
+Testing Cyclic Codes of length 14, try_20
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 12, 9]
+Testing Cyclic Codes of length 14, try_21
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 8, 9]
+Testing Cyclic Codes of length 14, try_22
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 10, 9]
+Testing Cyclic Codes of length 14, try_23
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 12, 9]
+Testing Cyclic Codes of length 14, try_24
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 10, 9]
+Testing Cyclic Codes of length 14, try_25
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 9, 9]
+Testing Cyclic Codes of length 14, try_26
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 15, 9]
+Testing Cyclic Codes of length 14, try_27
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 22, 13, 9]
+Testing Cyclic Codes of length 14, try_28
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 44, 9, 9]
+Testing Cyclic Codes of length 14, try_29
+Quantum Tanner Code over Cyclic group of order 14 with 6 generators
+Final code params: [504, 48, 13, 9]
+Testing Cyclic Codes of length 15, try_0
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 10, 9]
+Testing Cyclic Codes of length 15, try_1
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 12, 9]
+Testing Cyclic Codes of length 15, try_2
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 9, 9]
+Testing Cyclic Codes of length 15, try_3
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 9, 9]
+Testing Cyclic Codes of length 15, try_4
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 12, 9]
+Testing Cyclic Codes of length 15, try_5
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 15, 9]
+Testing Cyclic Codes of length 15, try_6
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 9, 9]
+Testing Cyclic Codes of length 15, try_7
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 15, 9]
+Testing Cyclic Codes of length 15, try_8
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 15, 9]
+Testing Cyclic Codes of length 15, try_9
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 9, 9]
+Testing Cyclic Codes of length 15, try_10
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 12, 9]
+Testing Cyclic Codes of length 15, try_11
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 9, 9]
+Testing Cyclic Codes of length 15, try_12
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 10, 9]
+Testing Cyclic Codes of length 15, try_13
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 13, 9]
+Testing Cyclic Codes of length 15, try_14
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 12, 9]
+Testing Cyclic Codes of length 15, try_15
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 12, 9]
+Testing Cyclic Codes of length 15, try_16
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 18, 9]
+Testing Cyclic Codes of length 15, try_17
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 10, 9]
+Testing Cyclic Codes of length 15, try_18
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 10, 9]
+Testing Cyclic Codes of length 15, try_19
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 9, 9]
+Testing Cyclic Codes of length 15, try_20
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 9, 9]
+Testing Cyclic Codes of length 15, try_21
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 10, 9]
+Testing Cyclic Codes of length 15, try_22
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 13, 9]
+Testing Cyclic Codes of length 15, try_23
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 12, 9]
+Testing Cyclic Codes of length 15, try_24
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 10, 9]
+Testing Cyclic Codes of length 15, try_25
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 9, 9]
+Testing Cyclic Codes of length 15, try_26
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 12, 9]
+Testing Cyclic Codes of length 15, try_27
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 12, 9]
+Testing Cyclic Codes of length 15, try_28
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 12, 9]
+Testing Cyclic Codes of length 15, try_29
+Quantum Tanner Code over Cyclic group of order 15 with 6 generators
+Final code params: [540, 46, 9, 9]
+Testing Cyclic Codes of length 16, try_0
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 52, 13, 9]
+Testing Cyclic Codes of length 16, try_1
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 12, 9]
+Testing Cyclic Codes of length 16, try_2
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 12, 9]
+Testing Cyclic Codes of length 16, try_3
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 12, 9]
+Testing Cyclic Codes of length 16, try_4
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 24, 12, 9]
+Testing Cyclic Codes of length 16, try_5
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 9, 9]
+Testing Cyclic Codes of length 16, try_6
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 12, 9]
+Testing Cyclic Codes of length 16, try_7
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 12, 9]
+Testing Cyclic Codes of length 16, try_8
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 52, 12, 9]
+Testing Cyclic Codes of length 16, try_9
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 11, 9]
+Testing Cyclic Codes of length 16, try_10
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 9, 9]
+Testing Cyclic Codes of length 16, try_11
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 18, 9]
+Testing Cyclic Codes of length 16, try_12
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 10, 9]
+Testing Cyclic Codes of length 16, try_13
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 12, 9]
+Testing Cyclic Codes of length 16, try_14
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 10, 9]
+Testing Cyclic Codes of length 16, try_15
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 40, 9, 9]
+Testing Cyclic Codes of length 16, try_16
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 10, 9]
+Testing Cyclic Codes of length 16, try_17
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 9, 9]
+Testing Cyclic Codes of length 16, try_18
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 11, 9]
+Testing Cyclic Codes of length 16, try_19
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 52, 12, 9]
+Testing Cyclic Codes of length 16, try_20
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 52, 13, 9]
+Testing Cyclic Codes of length 16, try_21
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 52, 12, 9]
+Testing Cyclic Codes of length 16, try_22
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 12, 9]
+Testing Cyclic Codes of length 16, try_23
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 12, 9]
+Testing Cyclic Codes of length 16, try_24
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 12, 9]
+Testing Cyclic Codes of length 16, try_25
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 52, 12, 9]
+Testing Cyclic Codes of length 16, try_26
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 48, 12, 9]
+Testing Cyclic Codes of length 16, try_27
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 52, 19, 9]
+Testing Cyclic Codes of length 16, try_28
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 52, 12, 9]
+Testing Cyclic Codes of length 16, try_29
+Quantum Tanner Code over Cyclic group of order 16 with 6 generators
+Final code params: [576, 52, 12, 9]
+Testing Cyclic Codes of length 17, try_0
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_1
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 10, 9]
+Testing Cyclic Codes of length 17, try_2
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 15, 9]
+Testing Cyclic Codes of length 17, try_3
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 9, 9]
+Testing Cyclic Codes of length 17, try_4
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_5
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 13, 9]
+Testing Cyclic Codes of length 17, try_6
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 10, 9]
+Testing Cyclic Codes of length 17, try_7
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 9, 9]
+Testing Cyclic Codes of length 17, try_8
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_9
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 13, 9]
+Testing Cyclic Codes of length 17, try_10
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_11
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_12
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 15, 9]
+Testing Cyclic Codes of length 17, try_13
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 10, 9]
+Testing Cyclic Codes of length 17, try_14
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 10, 9]
+Testing Cyclic Codes of length 17, try_15
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_16
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_17
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_18
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 9, 9]
+Testing Cyclic Codes of length 17, try_19
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 13, 9]
+Testing Cyclic Codes of length 17, try_20
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 10, 9]
+Testing Cyclic Codes of length 17, try_21
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 9, 9]
+Testing Cyclic Codes of length 17, try_22
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 15, 9]
+Testing Cyclic Codes of length 17, try_23
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_24
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_25
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_26
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 9, 9]
+Testing Cyclic Codes of length 17, try_27
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 11, 9]
+Testing Cyclic Codes of length 17, try_28
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 17, try_29
+Quantum Tanner Code over Cyclic group of order 17 with 6 generators
+Final code params: [612, 50, 12, 9]
+Testing Cyclic Codes of length 18, try_0
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 10, 9]
+Testing Cyclic Codes of length 18, try_1
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 56, 10, 9]
+Testing Cyclic Codes of length 18, try_2
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 15, 9]
+Testing Cyclic Codes of length 18, try_3
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 12, 9]
+Testing Cyclic Codes of length 18, try_4
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 9, 9]
+Testing Cyclic Codes of length 18, try_5
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 10, 9]
+Testing Cyclic Codes of length 18, try_6
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 6, 9]
+Testing Cyclic Codes of length 18, try_7
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 56, 12, 9]
+Testing Cyclic Codes of length 18, try_8
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 9, 9]
+Testing Cyclic Codes of length 18, try_9
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 56, 12, 9]
+Testing Cyclic Codes of length 18, try_10
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 15, 9]
+Testing Cyclic Codes of length 18, try_11
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 56, 12, 9]
+Testing Cyclic Codes of length 18, try_12
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 56, 12, 9]
+Testing Cyclic Codes of length 18, try_13
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 10, 9]
+Testing Cyclic Codes of length 18, try_14
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 10, 9]
+Testing Cyclic Codes of length 18, try_15
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 10, 9]
+Testing Cyclic Codes of length 18, try_16
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 12, 9]
+Testing Cyclic Codes of length 18, try_17
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 12, 9]
+Testing Cyclic Codes of length 18, try_18
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 12, 9]
+Testing Cyclic Codes of length 18, try_19
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 20, 17, 9]
+Testing Cyclic Codes of length 18, try_20
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 13, 9]
+Testing Cyclic Codes of length 18, try_21
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 12, 9]
+Testing Cyclic Codes of length 18, try_22
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 56, 12, 9]
+Testing Cyclic Codes of length 18, try_23
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 56, 12, 9]
+Testing Cyclic Codes of length 18, try_24
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 9, 9]
+Testing Cyclic Codes of length 18, try_25
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 10, 9]
+Testing Cyclic Codes of length 18, try_26
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 10, 9]
+Testing Cyclic Codes of length 18, try_27
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 10, 9]
+Testing Cyclic Codes of length 18, try_28
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 10, 9]
+Testing Cyclic Codes of length 18, try_29
+Quantum Tanner Code over Cyclic group of order 18 with 6 generators
+Final code params: [648, 52, 12, 9]
+Testing Cyclic Codes of length 19, try_0
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_1
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_2
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_3
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_4
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 10, 9]
+Testing Cyclic Codes of length 19, try_5
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_6
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 6, 9]
+Testing Cyclic Codes of length 19, try_7
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_8
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 10, 9]
+Testing Cyclic Codes of length 19, try_9
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_10
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_11
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 13, 9]
+Testing Cyclic Codes of length 19, try_12
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_13
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 15, 9]
+Testing Cyclic Codes of length 19, try_14
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 11, 9]
+Testing Cyclic Codes of length 19, try_15
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_16
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_17
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_18
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_19
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_20
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_21
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 9, 9]
+Testing Cyclic Codes of length 19, try_22
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_23
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 10, 9]
+Testing Cyclic Codes of length 19, try_24
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_25
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 9, 9]
+Testing Cyclic Codes of length 19, try_26
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_27
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_28
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]
+Testing Cyclic Codes of length 19, try_29
+Quantum Tanner Code over Cyclic group of order 19 with 6 generators
+Final code params: [684, 54, 12, 9]

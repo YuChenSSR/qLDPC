@@ -362,6 +362,36 @@ class ClassicalCode(AbstractCode):
             for rest in itertools.product(range(field), repeat=rank - top_row - 1)
         ]
         return ClassicalCode(np.array(strings).T, field=field)
+    
+    @classmethod
+    def CordaroWagner(cls, length:int, field: int | None = None) -> ClassicalCode:
+        """Construct Cordaro Wagner Code of length 4, 5, 6."""
+        field = field or DEFAULT_FIELD_ORDER
+        gf = galois.GF(field)
+        if length == 5:
+            gen = gf(np.array([[1, 0, 1, 1, 0],
+                        [0, 1, 1, 0, 1]
+                        ]))
+        if length == 6:
+            gen = gf(np.array([[1,1,0,0,1,1],
+                        [0,0,1,1,1,1]]))
+        return ~ClassicalCode(gen, field=field)
+    
+    @classmethod
+    def RepSum(cls, length:int, field: int | None = None) -> ClassicalCode:
+        """Construct punctured Hammming Codes [6,3,3] Code."""
+        field = field or DEFAULT_FIELD_ORDER
+        gf = galois.GF(field)
+        if length == 5:
+            gen = gf(np.array([[1, 0, 1, 1, 0],
+                        [0, 1, 1, 0, 1]
+                        ]))
+        if length == 6:
+            gen = gf(np.array([[1, 0, 0, 1, 1, 0],
+                        [0, 1, 0, 1, 0, 1],
+                        [0, 0, 1, 0, 1, 1]
+                        ]))
+        return ~ClassicalCode(gen, field=field)
 
     # TODO: add more codes, particularly from code families that are useful for good quantum codes
     # see https://mhostetter.github.io/galois/latest/api/#forward-error-correction
