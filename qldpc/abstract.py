@@ -571,6 +571,18 @@ class DihedralGroup(Group):
     def __init__(self, order: int) -> None:
         super().__init__(comb.named_groups.DihedralGroup(order))
 
+class AlternatingGroup(Group):
+    """Alternating group on order many elements."""
+
+    def __init__(self, order: int) -> None:
+        super().__init__(comb.named_groups.AlternatingGroup(order))
+
+class SymmetricGroup(Group):
+    """Symmetric group on order many elements."""
+
+    def __init__(self, order: int) -> None:
+        super().__init__(comb.named_groups.SymmetricGroup(order))
+
 
 class QuaternionGroup(Group):
     """Quaternion group: 1, i, j, k, -1, -i, -j, -k."""

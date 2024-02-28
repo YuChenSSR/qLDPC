@@ -22,18 +22,15 @@
 from collections.abc import Sequence
 
 import numpy as np
+import numpy.typing as npt
 
 from qldpc.abstract import CyclicGroup, Group, GroupMember, SpecialLinearGroup
 from qldpc.codes import ClassicalCode, QTCode
 
-
-def random_cyclicgens(
-    order: int | Sequence[int], degree: int, seed: int | None = None
-) -> tuple[Group, set[GroupMember], set[GroupMember]]:
-    """Generates a pair of random subsets of a cyclic group or a product of cyclic groups.
+def generate_cyclicgroup(order: int | Sequence[int]) -> Group:
+    """Generates Cyclic group of given order.
     Order: Can be an integer k --> Z_k or a tuple,
             (k_1,k_2, ... , k_r) --> Z_{k_1} x ... x Z_{k_r}
-    degree: The size of the subsets (both equal to degree)
     """
     cyclegroup: CyclicGroup | Group
     if isinstance(order, int):
@@ -42,6 +39,18 @@ def random_cyclicgens(
         cyclegroup = CyclicGroup(order[0])
         for i in order[1:]:
             cyclegroup = cyclegroup * CyclicGroup(i)
+    return cyclegroup
+
+def random_cyclicgens(
+    order: int | Sequence[int], degree: int, seed: int | None = None
+) -> tuple[Group, set[GroupMember], set[GroupMember], npt.NDArray[np.int_]| None]:
+    """Generates a pair of random subsets of a cyclic group or a product of cyclic groups.
+    Order: Can be an integer k --> Z_k or a tuple,
+            (k_1,k_2, ... , k_r) --> Z_{k_1} x ... x Z_{k_r}
+    degree: The size of the subsets (both equal to degree)
+    """
+    cyclegroup: CyclicGroup | Group
+    cyclegroup = generate_cyclicgroup(order)
     subset_a = cyclegroup.random_symmetric_subset(degree, seed=seed)
     subset_b = cyclegroup.random_symmetric_subset(degree, seed=seed)
     print(f"Quantum Tanner Code over Cyclic group of order {order} with {degree} generators")
@@ -49,18 +58,12 @@ def random_cyclicgens(
         # print("Generators")
         generators = np.array([[p(0) for p in subset_a], [p(0) for p in subset_b]])
         # print(generators)
+    else:
+        generators = None
     return cyclegroup, subset_a, subset_b, generators
 
 
-def random_lineargens(
-    sl_field: int, degree: int, dimension: int = 2
-) -> tuple[SpecialLinearGroup, set[GroupMember], set[GroupMember]]:
-    """Generates a pair of random subsets of SL(dimension, sl_field) of size degree."""
-    lineargroup = SpecialLinearGroup(sl_field, dimension)
-    subset_a = lineargroup.random_symmetric_subset(degree)
-    subset_b = lineargroup.random_symmetric_subset(degree)
-    print(f"Quantum Tanner Code over SL({sl_field}, {dimension}) with {degree} generators ")
-    return lineargroup, subset_a, subset_b
+
 
 
 def random_basecodes(
@@ -80,7 +83,7 @@ def random_basecodes(
         code_a = ClassicalCode.hamming(hamming, field)
         code_b = ~code_a
     elif CordaroWagner:
-        assert blocklength in [5, 6]
+        assert blocklength in [4, 5, 6]
         code_a = ClassicalCode.CordaroWagner(blocklength, field=2)
         code_b = ~code_a
     elif RepSum:
@@ -98,6 +101,10 @@ def random_basecodes(
     print(code_a.get_code_params())
     print(code_b.get_code_params())
     return code_a, code_b
+
+def subset_to_array(subset : set[GroupMember],
+                     ) -> npt.NDArray[np.int_]:
+    return np.array([s.array_form for s in subset])
 
 
 def random_cyclicQTcode(
@@ -141,31 +148,73 @@ def random_cyclicQTcode(
     ]
     print("Final code params:", params)
     if save_file:
+        array_a = subset_to_array(subset_a)
+        array_b = subset_to_array(subset_b)
         if hamming or CordaroWagner or RepSum:
-            np.savez_compressed(save_file, params=params, gen=generators)
+            np.savez_compressed(save_file, params=params, gen=generators, array_a= array_a, array_b= array_b )
         else:
             np.savez_compressed(
-                save_file, params=params, gen=generators, code_a=code_a.matrix, code_b=code_b.matrix
+                save_file, params=params, gen=generators, code_a=code_a.matrix, code_b=code_b.matrix, array_a= array_a, array_b= array_b,
             )
     return tannercode
 
 
-def random_linearQTcode(
-    sl_field: int,
-    field: int = 2,
-    dimension: int = 2,
-    hamming: int | None = None,
+# def random_linearQTcode(
+#     sl_field: int,
+#     field: int = 2,
+#     dimension: int = 2,
+#     hamming: int | None = None,
+#     CordaroWagner: bool = False,
+#     RepSum: bool = False,
+#     save_file: str | None = None,
+# ) -> QTCode:
+#     """Constructs a Quantum Tanner Code over SpecialLinear group of given order
+#     with random generators.
+#     """
+#     if hamming:
+#         deg = 2**hamming - 1
+#         assert deg <= size
+
+#     elif CordaroWagner or RepSum:
+#         deg = 6
+#     else:
+#         deg = 5
+#     _, subset_a, subset_b = random_lineargens(sl_field, deg, dimension)
+#     code_a, code_b = random_basecodes(deg, field, hamming=hamming, CordaroWagner=CordaroWagner, RepSum=RepSum, save_file=save_file)
+#     tannercode = QTCode(subset_a, subset_b, code_a, code_b)
+#     params = [
+#         tannercode.num_qubits,
+#         tannercode.dimension,
+#         tannercode.get_distance(upper=5, ensure_nontrivial=False),
+#         tannercode.get_weight(),
+#     ]
+#     print("Final code params:", params)
+#     return tannercode
+
+# def random_lineargens(
+#     sl_field: int, degree: int, dimension: int = 2
+# ) -> tuple[SpecialLinearGroup, set[GroupMember], set[GroupMember]]:
+#     """Generates a pair of random subsets of SL(dimension, sl_field) of size degree."""
+#     lineargroup = SpecialLinearGroup(sl_field, dimension)
+#     subset_a = lineargroup.random_symmetric_subset(degree)
+#     subset_b = lineargroup.random_symmetric_subset(degree)
+#     print(f"Quantum Tanner Code over SL({sl_field}, {dimension}) with {degree} generators ")
+#     return lineargroup, subset_a, subset_b
+
+
+def random_QTcode(
+    group: Group,
+    seed:int,
+    code_a: ClassicalCode,
     save_file: str | None = None,
 ) -> QTCode:
-    """Constructs a Quantum Tanner Code over SpecialLinear group of given order
-    with random generators.
+    """Constructs a Quantum Tanner Code over given group using random pair of generators.
+    The base codes are code_a and its dual.
     """
-    if hamming:
-        deg = 2**hamming - 1
-    else:
-        deg = 5
-    _, subset_a, subset_b = random_lineargens(sl_field, deg, dimension)
-    code_a, code_b = random_basecodes(deg, field, hamming=hamming, save_file=save_file)
+    code_b = ~code_a
+    degree = code_a.num_bits
+    subset_a = group.random_symmetric_subset(degree, seed=seed)
+    subset_b = group.random_symmetric_subset(degree, seed=seed)
     tannercode = QTCode(subset_a, subset_b, code_a, code_b)
     params = [
         tannercode.num_qubits,
@@ -174,4 +223,8 @@ def random_linearQTcode(
         tannercode.get_weight(),
     ]
     print("Final code params:", params)
+    if save_file:
+        array_a = subset_to_array(subset_a)
+        array_b = subset_to_array(subset_b)
+        np.savez_compressed(save_file, params=params, array_a= array_a, array_b= array_b)
     return tannercode

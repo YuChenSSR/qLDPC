@@ -24,7 +24,7 @@ from collections.abc import Sequence
 import numpy as np
 
 import qldpc.random_methods as generate
-from qldpc.abstract import CyclicGroup
+from qldpc.abstract import CyclicGroup, DihedralGroup, AlternatingGroup, SymmetricGroup, QuaternionGroup
 from qldpc.codes import ClassicalCode, QTCode
 
 
@@ -63,27 +63,26 @@ def reconstruct_CHcode(
     return QTCode(subset_a, subset_b, code_a, code_b, twopartite=False)
 
 
+list_prod = [(2,2), (2,4), (2,2,2), (3,3), (2,6), (2,8), (4,4), (2,2,2,2), (3,6) ]
+
 np.set_printoptions(linewidth=200)
 
 field = 2
 hamming = 3
 test = True
 check = False
+code_a = ClassicalCode.hamming(hamming, field)
+code_a = ClassicalCode.CordaroWagner(blocklength, field=field)
+code_a = ClassicalCode.RepSum(blocklength, field=field)
 
 if test:
-    for blocklength in range(9, 14):
-        for attempt in range(3):
-            # file = f'./experiment_arrays/test_cycle_{blocklength}_RepSum_try_{attempt}.npz'
-            print(f"Testing Cyclic Codes of length {blocklength}, try_{attempt}")
-            # generate.random_cyclicQTcode(blocklength, field, hamming=hamming, save_file=file)
-            generate.random_cyclicQTcode(blocklength, field)
+    for blocklength in list_prod[1:]:
+        group = generate_cyclicgroup(blocklength)
+        for attempt in range(20):
+            file = f'./experiment_arrays/test_prodcycle_{blocklength}_ham3_try_{attempt}.npz'
+            print(f"Testing Product Cyclic Codes of length {blocklength}, try_{attempt}")
+            generate.random_QTcode(group,code_a,save_file=file)
             # tannercode = reconstruct_CHcode(file, blocklength, hamming=2, field=2)
-            # params = [
-            # tannercode.num_qubits,
-            # tannercode.dimension,
-            # tannercode.get_distance(upper=100, ensure_nontrivial=False),
-            # tannercode.get_weight(),]
-            # print("Final code params:", params)
 
 if check:
     blocklength = 15
@@ -110,7 +109,6 @@ if check:
 11,3,13,2 [539, 35, 34, 18]
 12, 3, 4,2 [588, 44, 28, 18]
 12, 3, 12, 2 [588, 36, 33, 18]
-
 13, 3, [2, 6, 28 ] , 2 [637, 37, [32, 34, 40], 18]
 
 """

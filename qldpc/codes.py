@@ -368,12 +368,14 @@ class ClassicalCode(AbstractCode):
         """Construct Cordaro Wagner Code of length 4, 5, 6."""
         field = field or DEFAULT_FIELD_ORDER
         gf = galois.GF(field)
+        if length == 4:
+            gen = gf(np.array([[1, 1, 0, 0], [0, 0, 1, 1]]))
         if length == 5:
             gen = gf(np.array([[1, 0, 1, 1, 0], [0, 1, 1, 0, 1]]))
         if length == 6:
-            # gen = gf(np.array([[1, 1, 0, 0, 1, 1], [0, 0, 1, 1, 1, 1]]))
-            parity = gf(np.array([[1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1], [0, 0, 1, 1, 0, 0], [1, 0, 1, 0, 1, 0] ]))
-            return ClassicalCode(parity, field=field) 
+            gen = gf(np.array([[1, 1, 0, 0, 1, 1], [0, 0, 1, 1, 1, 1]]))
+            # parity = gf(np.array([[1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1], [0, 0, 1, 1, 0, 0], [1, 0, 1, 0, 1, 0] ]))
+            # return ClassicalCode(parity, field=field) 
         return ~ClassicalCode(gen, field=field)
 
     @classmethod
