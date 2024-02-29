@@ -583,6 +583,40 @@ class SymmetricGroup(Group):
     def __init__(self, order: int) -> None:
         super().__init__(comb.named_groups.SymmetricGroup(order))
 
+class DiCyclicGroup(Group):
+    """Dicyclic group of order at most 20."""
+
+
+    def __init__(self, order: int) -> None:
+        # F, a, b  = comb.free_groups.free_group("a, b")
+        # n = order
+        # return super().__init__(comb.fp_groups.FpGroup(F, [a**(2*n), a**n*b**-2,b*a*b**-1*a]))
+        
+        assert 1 < order < 6
+        if order == 1:
+            return super().__init__(comb.named_groups.CyclicGroup(4))
+        
+        elif order == 2:
+            return QuaternionGroup()
+        
+        elif order == 3:
+            A = comb.Permutation(1, 2, 3)
+            B = comb.Permutation(2,3)(4,5,6,7)
+            return super().__init__(comb.PermutationGroup(A, B))
+        
+        elif order == 4:
+            A = comb.Permutation(1, 2, 3, 4, 5, 6, 7, 8)(9, 10, 11, 12, 13, 14, 15, 16)
+            B = comb.Permutation(1, 9, 5, 13)(2, 16, 6, 12)(3, 15, 7, 11)(4, 14, 8, 10)
+            return super().__init__(comb.PermutationGroup(A, B))
+        
+        elif order == 5:
+            """ Source : https://people.maths.bris.ac.uk/~matyd/GroupNames/1/Dic5.html
+            """
+            A = comb.Permutation(1,2,3,4,5,6,7,8,9,10)(11,12,13,14,15,16,17,18,19,20)
+            B = comb.Permutation(1,14,6,19),(2,13,7,18),(3,12,8,17),(4,11,9,16),(5,20,10,15)
+            return super().__init__(comb.PermutationGroup(A, B))
+        
+
 
 class QuaternionGroup(Group):
     """Quaternion group: 1, i, j, k, -1, -i, -j, -k."""

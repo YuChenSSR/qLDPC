@@ -64,6 +64,9 @@ def reconstruct_CHcode(
 
 
 list_prod = [(2,2), (2,4), (2,2,2), (3,3), (2,6), (2,8), (4,4), (2,2,2,2), (3,6) ]
+list_dihedral = [8, 10, 12, 14, 16, 18, 20]
+list_dicyclic = [8, 12, 16, 20]
+
 
 np.set_printoptions(linewidth=200)
 
@@ -72,12 +75,14 @@ hamming = 3
 test = True
 check = False
 code_a = ClassicalCode.hamming(hamming, field)
-code_a = ClassicalCode.CordaroWagner(blocklength, field=field)
-code_a = ClassicalCode.RepSum(blocklength, field=field)
+#code_a = ClassicalCode.CordaroWagner(blocklength, field=field)
+#code_a = ClassicalCode.RepSum(blocklength, field=field)
+
+group = DihedralGroup(blocklength)
 
 if test:
-    for blocklength in list_prod[1:]:
-        group = generate_cyclicgroup(blocklength)
+    for blocklength in list_prod[-3:]:
+        group = generate.generate_cyclicgroup(blocklength)
         for attempt in range(20):
             file = f'./experiment_arrays/test_prodcycle_{blocklength}_ham3_try_{attempt}.npz'
             print(f"Testing Product Cyclic Codes of length {blocklength}, try_{attempt}")
