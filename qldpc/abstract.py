@@ -620,12 +620,9 @@ class Order16(Group):
     """ Outputs Group of Order 16 based on GAP ID
     Source : https://people.maths.bris.ac.uk/~matyd/GroupNames/index.html
     """
-     def __init__(self, id: int) -> None:
-        # F, a, b  = comb.free_groups.free_group("a, b")
-        # n = order
-        # return super().__init__(comb.fp_groups.FpGroup(F, [a**(2*n), a**n*b**-2,b*a*b**-1*a]))
+    def __init__(self, id: int) -> None:
         
-        assert 0 < id < 14
+        assert id > 0 and id < 15
         
         if id == 1:
             super().__init__(comb.named_groups.CyclicGroup(16))
@@ -724,6 +721,74 @@ class Order16(Group):
             D = comb.Permutation(1,3)(2,4)(5,13)(6,14)(7,16)(8,15)(9,12)(10,11)
             super().__init__(comb.PermutationGroup(A, B, C, D))
     
+class Order18(Group):
+    """ Outputs Group of Order 18 based on GAP ID
+    Source : https://people.maths.bris.ac.uk/~matyd/GroupNames/index.html
+    """
+    def __init__(self, id: int) -> None:
+        
+        assert id > 0 and id < 6
+        
+        if id == 1:
+            super().__init__(comb.named_groups.DihedralGroup(18))
+        
+        elif id == 2:
+            super().__init__(comb.named_groups.CyclicGroup(18))
+ 
+        elif id == 3:
+            """The direct product of C3 and S3
+            https://people.maths.bris.ac.uk/~matyd/GroupNames/1/C3xS3.html"""
+            A = comb.Permutation(1,2,3)(4,5,6)
+            B = comb.Permutation(1,2,3)(4,6,5)
+            C = comb.Permutation(1,4)(2,5)(3,6)
+            super().__init__(comb.PermutationGroup(A, B, C))
+        
+        elif id == 4:
+            """The semidirect product of C3 and S3
+            https://people.maths.bris.ac.uk/~matyd/GroupNames/1/C3sS3.html"""
+            A = comb.Permutation(1,2,3)(4,5,6)(7,8,9)
+            B = comb.Permutation(1,5,8)(2,6,9)(3,4,7)
+            C = comb.Permutation(2,3)(4,9)(5,8)(6,7)
+            super().__init__(comb.PermutationGroup(A, B, C))
+        
+        elif id == 5:
+            """The direct product of C3 and C6 
+            https://people.maths.bris.ac.uk/~matyd/GroupNames/1/C3xC6.html"""
+            A = comb.Permutation(1,12,15)(2,7,16)(3,8,17)(4,9,18)(5,10,13)(6,11,14)
+            B = comb.Permutation(1,2,3,4,5,6)(7,8,9,10,11,12)(13,14,15,16,17,18)
+            super().__init__(comb.PermutationGroup(A, B))
+
+class Order20(Group):
+    """ Outputs Group of Order 20 based on GAP ID
+    Source : https://people.maths.bris.ac.uk/~matyd/GroupNames/index.html
+    """
+    def __init__(self, id: int) -> None:
+        
+        assert id > 0 and id < 6
+        
+        if id == 1:
+            return DiCyclicGroup(5)
+        
+        elif id == 2:
+            super().__init__(comb.named_groups.CyclicGroup(20))
+ 
+        elif id == 3:
+            """Frobenius group
+            https://people.maths.bris.ac.uk/~matyd/GroupNames/1/F5.html"""
+            A = comb.Permutation(1,2,3,4,5)
+            B = comb.Permutation(2,3,5,4)
+            super().__init__(comb.PermutationGroup(A, B))
+        
+        elif id == 4:
+            super().__init__(comb.named_groups.DihedralGroup(20))
+
+        elif id == 5:
+            """The direct product of C2 and C10 
+            https://people.maths.bris.ac.uk/~matyd/GroupNames/1/C2xC10.html"""
+            A = comb.Permutation(1,17)(2,18)(3,19)(4,20)(5,11)(6,12)(7,13)(8,14)(9,15)(10,16)
+            B = comb.Permutation(1,2,3,4,5,6,7,8,9,10)(11,12,13,14,15,16,17,18,19,20)
+            super().__init__(comb.PermutationGroup(A, B))
+
 
 class QuaternionGroup(Group):
     """Quaternion group: 1, i, j, k, -1, -i, -j, -k."""
