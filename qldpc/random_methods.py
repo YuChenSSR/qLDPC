@@ -105,7 +105,7 @@ def random_QTcode(
     params = [
         tannercode.num_qubits,
         tannercode.dimension,
-        tannercode.get_distance(upper=100, ensure_nontrivial=False),
+        tannercode.get_distance(upper=500, ensure_nontrivial=False),
         tannercode.get_weight(),
     ]
     print("Final code params:", params)

@@ -75,7 +75,7 @@ hamming = 3
 test = True
 check = False
 #code_a = ClassicalCode.hamming(hamming, field)
-code_a = ClassicalCode.CordaroWagner(5, field=field)
+code_a = ClassicalCode.CordaroWagner(6, field=field)
 #code_a = ClassicalCode.RepSum(blocklength, field=field)
 #group = DihedralGroup(blocklength)
 
