@@ -83,7 +83,7 @@ if test:
     for blocklength in list_prod[1:]:
         group = generate.generate_cyclicgroup(blocklength)
         for attempt in range(20):
-            file = f'./experiment_arrays/test_prodcycle_{blocklength}_Cordaro5_try_{attempt}.npz'
+            file = f'./experiment_arrays/test_prodcycle_{blocklength}_Cordaro6_try_{attempt}.npz'
             print(f"Testing Product Cyclic Codes of length {blocklength}, try_{attempt}")
             generate.random_QTcode(group,code_a,save_file=file)
             # tannercode = reconstruct_CHcode(file, blocklength, hamming=2, field=2)
