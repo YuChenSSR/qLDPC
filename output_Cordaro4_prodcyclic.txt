@@ -1,0 +1,320 @@
+Testing Product Cyclic Codes of length (2, 4), try_0
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 4), try_1
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 4), try_2
+Final code params: [128, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 4), try_3
+Final code params: [128, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 4), try_4
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 4), try_5
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 4), try_6
+Final code params: [128, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 4), try_7
+Final code params: [128, 24, 2, 4]
+Testing Product Cyclic Codes of length (2, 4), try_8
+Final code params: [128, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 4), try_9
+Final code params: [128, 12, 2, 4]
+Testing Product Cyclic Codes of length (2, 4), try_10
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 4), try_11
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 4), try_12
+Final code params: [128, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 4), try_13
+Final code params: [128, 24, 2, 4]
+Testing Product Cyclic Codes of length (2, 4), try_14
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 4), try_15
+Final code params: [128, 24, 2, 4]
+Testing Product Cyclic Codes of length (2, 4), try_16
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 4), try_17
+Final code params: [128, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 4), try_18
+Final code params: [64, 8, 2, 4]
+Testing Product Cyclic Codes of length (2, 4), try_19
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_0
+Final code params: [128, 20, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_1
+Final code params: [128, 20, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_2
+Final code params: [128, 24, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_3
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_4
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_5
+Final code params: [128, 20, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_6
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_7
+Final code params: [128, 20, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_8
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_9
+Final code params: [128, 20, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_10
+Final code params: [128, 20, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_11
+Final code params: [128, 20, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_12
+Final code params: [128, 24, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_13
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_14
+Final code params: [128, 24, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_15
+Final code params: [128, 20, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_16
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_17
+Final code params: [128, 20, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_18
+Final code params: [128, 24, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2), try_19
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (3, 3), try_0
+Final code params: [144, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_1
+Final code params: [144, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_2
+Final code params: [144, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_3
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_4
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_5
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_6
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_7
+Final code params: [144, 12, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_8
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_9
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_10
+Final code params: [144, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_11
+Final code params: [144, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_12
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_13
+Final code params: [144, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_14
+Final code params: [144, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_15
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_16
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_17
+Final code params: [144, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_18
+Final code params: [144, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 3), try_19
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (2, 6), try_0
+Final code params: [192, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 6), try_1
+Final code params: [192, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 6), try_2
+Final code params: [192, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 6), try_3
+Final code params: [192, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 6), try_4
+Final code params: [192, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 6), try_5
+Final code params: [192, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 6), try_6
+Final code params: [192, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 6), try_7
+Final code params: [192, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 6), try_8
+Final code params: [192, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 6), try_9
+Final code params: [192, 20, 2, 4]
+Testing Product Cyclic Codes of length (2, 6), try_10
+Final code params: [192, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 6), try_11
+Final code params: [192, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 6), try_12
+Final code params: [192, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 6), try_13
+Final code params: [192, 24, 2, 4]
+Testing Product Cyclic Codes of length (2, 6), try_14
+Final code params: [192, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 6), try_15
+Final code params: [192, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 6), try_16
+Final code params: [192, 12, 4, 4]
+Testing Product Cyclic Codes of length (2, 6), try_17
+Final code params: [192, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 6), try_18
+Final code params: [192, 12, 4, 4]
+Testing Product Cyclic Codes of length (2, 6), try_19
+Final code params: [192, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 8), try_0
+Final code params: [128, 16, 2, 4]
+Testing Product Cyclic Codes of length (2, 8), try_1
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 8), try_2
+Final code params: [256, 16, 2, 4]
+Testing Product Cyclic Codes of length (2, 8), try_3
+Final code params: [256, 40, 2, 4]
+Testing Product Cyclic Codes of length (2, 8), try_4
+Final code params: [256, 24, 2, 4]
+Testing Product Cyclic Codes of length (2, 8), try_5
+Final code params: [128, 16, 2, 4]
+Testing Product Cyclic Codes of length (2, 8), try_6
+Final code params: [256, 48, 2, 4]
+Testing Product Cyclic Codes of length (2, 8), try_7
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 8), try_8
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 8), try_9
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 8), try_10
+Final code params: [256, 40, 2, 4]
+Testing Product Cyclic Codes of length (2, 8), try_11
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 8), try_12
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 8), try_13
+Final code params: [256, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 8), try_14
+Final code params: [256, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 8), try_15
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 8), try_16
+Final code params: [256, 12, 4, 4]
+Testing Product Cyclic Codes of length (2, 8), try_17
+Final code params: [256, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 8), try_18
+Final code params: [256, 32, 2, 4]
+Testing Product Cyclic Codes of length (2, 8), try_19
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_0
+Final code params: [256, 8, 8, 4]
+Testing Product Cyclic Codes of length (4, 4), try_1
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_2
+Final code params: [256, 24, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_3
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_4
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_5
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_6
+Final code params: [256, 32, 2, 4]
+Testing Product Cyclic Codes of length (4, 4), try_7
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_8
+Final code params: [256, 8, 8, 4]
+Testing Product Cyclic Codes of length (4, 4), try_9
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_10
+Final code params: [256, 24, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_11
+Final code params: [256, 40, 2, 4]
+Testing Product Cyclic Codes of length (4, 4), try_12
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_13
+Final code params: [256, 48, 2, 4]
+Testing Product Cyclic Codes of length (4, 4), try_14
+Final code params: [256, 24, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_15
+Final code params: [256, 24, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_16
+Final code params: [256, 24, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_17
+Final code params: [256, 8, 8, 4]
+Testing Product Cyclic Codes of length (4, 4), try_18
+Final code params: [256, 16, 4, 4]
+Testing Product Cyclic Codes of length (4, 4), try_19
+Final code params: [256, 24, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_0
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_1
+Final code params: [256, 40, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_2
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_3
+Final code params: [256, 48, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_4
+Final code params: [128, 16, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_5
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_6
+Final code params: [256, 40, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_7
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_8
+Final code params: [256, 40, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_9
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_10
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_11
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_12
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_13
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_14
+Final code params: [256, 40, 2, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_15
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_16
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_17
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_18
+Final code params: [256, 32, 4, 4]
+Testing Product Cyclic Codes of length (2, 2, 2, 2), try_19
+Final code params: [256, 40, 2, 4]
+Testing Product Cyclic Codes of length (3, 6), try_0
+Final code params: [288, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 6), try_1
+Final code params: [288, 24, 4, 4]
+Testing Product Cyclic Codes of length (3, 6), try_2
+Final code params: [288, 24, 4, 4]
+Testing Product Cyclic Codes of length (3, 6), try_3
+Final code params: [288, 32, 2, 4]
+Testing Product Cyclic Codes of length (3, 6), try_4
+Final code params: [288, 16, 4, 4]
+Testing Product Cyclic Codes of length (3, 6), try_5
+Final code params: [288, 32, 2, 4]
+Testing Product Cyclic Codes of length (3, 6), try_6
+Final code params: [288, 24, 4, 4]
+Testing Product Cyclic Codes of length (3, 6), try_7
+Final code params: [288, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 6), try_8
+Final code params: [288, 32, 2, 4]
+Testing Product Cyclic Codes of length (3, 6), try_9
+Final code params: [288, 24, 2, 4]
+Testing Product Cyclic Codes of length (3, 6), try_10
+Final code params: [288, 24, 4, 4]
+Testing Product Cyclic Codes of length (3, 6), try_11
+Final code params: [288, 24, 4, 4]
+Testing Product Cyclic Codes of length (3, 6), try_12
+Final code params: [288, 16, 4, 4]
+Testing Product Cyclic Codes of length (3, 6), try_13
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (3, 6), try_14
+Final code params: [144, 16, 2, 4]
+Testing Product Cyclic Codes of length (3, 6), try_15
+Final code params: [288, 32, 2, 4]
+Testing Product Cyclic Codes of length (3, 6), try_16
+Final code params: [288, 32, 2, 4]
+Testing Product Cyclic Codes of length (3, 6), try_17
+Final code params: [288, 16, 4, 4]
+Testing Product Cyclic Codes of length (3, 6), try_18
+Final code params: [288, 16, 4, 4]
+Testing Product Cyclic Codes of length (3, 6), try_19
+Final code params: [288, 48, 2, 4]

@@ -23,8 +23,8 @@ from collections.abc import Sequence
 
 import numpy as np
 import numpy.typing as npt
-
-from qldpc.abstract import CyclicGroup, Group, GroupMember, SpecialLinearGroup
+import qldpc.abstract
+from qldpc.abstract import CyclicGroup, Group, GroupMember, SpecialLinearGroup, SymmetricGroup, AlternatingGroup
 from qldpc.codes import ClassicalCode, QTCode
 
 def generate_cyclicgroup(order: int | Sequence[int]) -> Group:
@@ -41,6 +41,57 @@ def generate_cyclicgroup(order: int | Sequence[int]) -> Group:
             cyclegroup = cyclegroup * CyclicGroup(i)
     return cyclegroup
 
+def generate_groups_of_order(order: int) -> Sequence[Group]:
+    """Generates a list of all groups of given order upto 20
+        List is ordered by GAP ID.
+    """
+    assert order > 1 and order < 21
+    list_single = [2,3,5,7,11,13,15,17,19]
+    
+    if order in list_single:
+        return [generate_cyclicgroup(order)]
+    
+    elif order == 4:
+        return [generate_cyclicgroup(4), generate_cyclicgroup((2,2))]
+
+    elif order == 6:
+        return [SymmetricGroup(3), generate_cyclicgroup(6) ]
+
+    elif order == 8:
+        g_1 = generate_cyclicgroup(8)
+        g_2 = generate_cyclicgroup((2,4))
+        g_3 = qldpc.abstract.DihedralGroup(4)
+        g_4 = qldpc.abstract.DiCyclicGroup(8)
+        g_5 = generate_cyclicgroup((2,2,2))
+        return [g_1, g_2, g_3, g_4, g_5]
+           
+    elif order == 9:
+        return [generate_cyclicgroup(9), generate_cyclicgroup((3,3))]
+
+    elif order == 10:
+        return [qldpc.abstract.DihedralGroup(5), generate_cyclicgroup(10)]
+
+    elif order == 12:
+        g_1 = qldpc.abstract.DiCyclicGroup(12)
+        g_2 = generate_cyclicgroup(12)
+        g_3 = qldpc.abstract.AlternatingGroup(4)
+        g_4 = qldpc.abstract.DihedralGroup(6)
+        g_5 = generate_cyclicgroup((2, 6))
+        return [g_1, g_2, g_3, g_4, g_5]
+           
+    elif order == 14:
+        return [qldpc.abstract.DihedralGroup(7), generate_cyclicgroup(14)]
+
+    elif order == 16:
+        return [qldpc.abstract.Order16(i) for i in range(1,15)]
+    
+    elif order == 18:
+        return [qldpc.abstract.Order18(i) for i in range(1,6)]
+
+    elif order == 20:
+        return [qldpc.abstract.Order20(i) for i in range(1,6)]
+
+    
 
 # def random_cyclicgens(
 #     order: int | Sequence[int], degree: int, seed: int | None = None

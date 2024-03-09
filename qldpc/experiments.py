@@ -72,18 +72,42 @@ np.set_printoptions(linewidth=200)
 
 field = 2
 hamming = 3
-test = True
+test = False
 check = False
 #code_a = ClassicalCode.hamming(hamming, field)
-code_a = ClassicalCode.CordaroWagner(6, field=field)
+code_a = ClassicalCode.CordaroWagner(4, field=field)
 #code_a = ClassicalCode.RepSum(blocklength, field=field)
 #group = DihedralGroup(blocklength)
+
+
+def test_group_allcodes(ord : int) -> None:
+    list_codes = [(ClassicalCode.hamming(2),"Hamming2"), (ClassicalCode.CordaroWagner(4), "Cordaro4")]
+    list_groups = generate.generate_groups_of_order(ord) 
+    if ord > 6 :
+        list_codes = list_codes + [(ClassicalCode.CordaroWagner(5), "Cordaro5")]
+    if ord > 7:
+            list_codes = list_codes + [(ClassicalCode.CordaroWagner(6),"Cordaro6"), (ClassicalCode.RepSum(6), "RepSum6") ]
+    if ord > 9 :
+        list_codes = list_codes + [(ClassicalCode.hamming(3), "Hamming3")]
+    num = len(list_groups)
+    for id in range(num):
+        print(f"\nTesting Group of order {ord} with ID {id+1}")
+        for code_a, name in list_codes:
+            print(f"Testing using Base Code -- {name}")
+            for attempt in range(20):
+                file = f'./experiment_arrays/all_groups/test_group_{ord,id}_{name}_try_{attempt}.npz'
+                generate.random_QTcode(list_groups[id],code_a,save_file=file)
+         
+
+for ord in range(5,21):    
+    test_group_allcodes(ord)    
+
 
 if test:
     for blocklength in list_prod[1:]:
         group = generate.generate_cyclicgroup(blocklength)
         for attempt in range(20):
-            file = f'./experiment_arrays/test_prodcycle_{blocklength}_Cordaro6_try_{attempt}.npz'
+            file = f'./experiment_arrays/test_prodcycle_{blocklength}_Cordaro4_try_{attempt}.npz'
             print(f"Testing Product Cyclic Codes of length {blocklength}, try_{attempt}")
             generate.random_QTcode(group,code_a,save_file=file)
             # tannercode = reconstruct_CHcode(file, blocklength, hamming=2, field=2)
