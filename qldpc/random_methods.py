@@ -23,9 +23,16 @@ from collections.abc import Sequence
 
 import numpy as np
 import numpy.typing as npt
+
 import qldpc.abstract
-from qldpc.abstract import CyclicGroup, Group, GroupMember, SpecialLinearGroup, SymmetricGroup, AlternatingGroup
+from qldpc.abstract import (
+    CyclicGroup,
+    Group,
+    GroupMember,
+    SymmetricGroup,
+)
 from qldpc.codes import ClassicalCode, QTCode
+
 
 def generate_cyclicgroup(order: int | Sequence[int]) -> Group:
     """Generates Cyclic group of given order.
@@ -41,57 +48,58 @@ def generate_cyclicgroup(order: int | Sequence[int]) -> Group:
             cyclegroup = cyclegroup * CyclicGroup(i)
     return cyclegroup
 
+
 def generate_groups_of_order(order: int) -> Sequence[Group]:
     """Generates a list of all groups of given order upto 20
-        List is ordered by GAP ID.
+    List is ordered by GAP ID.
     """
     assert order > 1 and order < 21
-    list_single = [2,3,5,7,11,13,15,17,19]
-    
+    list_single = [2, 3, 5, 7, 11, 13, 15, 17, 19]
+
     if order in list_single:
         return [generate_cyclicgroup(order)]
-    
+
     elif order == 4:
-        return [generate_cyclicgroup(4), generate_cyclicgroup((2,2))]
+        return [generate_cyclicgroup(4), generate_cyclicgroup((2, 2))]
 
     elif order == 6:
-        return [SymmetricGroup(3), generate_cyclicgroup(6) ]
+        return [SymmetricGroup(3), generate_cyclicgroup(6)]
 
     elif order == 8:
         g_1 = generate_cyclicgroup(8)
-        g_2 = generate_cyclicgroup((2,4))
+        g_2 = generate_cyclicgroup((2, 4))
         g_3 = qldpc.abstract.DihedralGroup(4)
         g_4 = qldpc.abstract.DiCyclicGroup(8)
-        g_5 = generate_cyclicgroup((2,2,2))
+        g_5 = generate_cyclicgroup((2, 2, 2))
         return [g_1, g_2, g_3, g_4, g_5]
-           
+
     elif order == 9:
-        return [generate_cyclicgroup(9), generate_cyclicgroup((3,3))]
+        return [generate_cyclicgroup(9), generate_cyclicgroup((3, 3))]
 
     elif order == 10:
         return [qldpc.abstract.DihedralGroup(5), generate_cyclicgroup(10)]
 
     elif order == 12:
-        g_1 = qldpc.abstract.DiCyclicGroup(12)
-        g_2 = generate_cyclicgroup(12)
-        g_3 = qldpc.abstract.AlternatingGroup(4)
-        g_4 = qldpc.abstract.DihedralGroup(6)
-        g_5 = generate_cyclicgroup((2, 6))
-        return [g_1, g_2, g_3, g_4, g_5]
-           
+        h_1 = qldpc.abstract.DiCyclicGroup(12)
+        h_2 = generate_cyclicgroup(12)
+        h_3 = qldpc.abstract.AlternatingGroup(4)
+        h_4 = qldpc.abstract.DihedralGroup(6)
+        h_5 = generate_cyclicgroup((2, 6))
+        return [h_1, h_2, h_3, h_4, h_5]
+
     elif order == 14:
         return [qldpc.abstract.DihedralGroup(7), generate_cyclicgroup(14)]
 
     elif order == 16:
-        return [qldpc.abstract.Order16(i) for i in range(1,15)]
-    
+        return [qldpc.abstract.Order16(i) for i in range(1, 15)]
+
     elif order == 18:
-        return [qldpc.abstract.Order18(i) for i in range(1,6)]
+        return [qldpc.abstract.Order18(i) for i in range(1, 6)]
 
     elif order == 20:
-        return [qldpc.abstract.Order20(i) for i in range(1,6)]
+        return [qldpc.abstract.Order20(i) for i in range(1, 6)]
+        
 
-    
 
 # def random_cyclicgens(
 #     order: int | Sequence[int], degree: int, seed: int | None = None
@@ -113,7 +121,6 @@ def generate_groups_of_order(order: int) -> Sequence[Group]:
 #     else:
 #         generators = None
 #     return cyclegroup, subset_a, subset_b, generators
-     
 
 
 def random_basecodes(
@@ -124,7 +131,7 @@ def random_basecodes(
     dim(C_A) + dim(C_B) = blocklength
     """
     rate = 0.4
-    checks =  blocklength - int((rate * blocklength))
+    checks = blocklength - int((rate * blocklength))
     checks = 3
     print("Inner Code is random linear and its dual")
     code_a = ClassicalCode.random(blocklength, checks, field)
@@ -134,8 +141,10 @@ def random_basecodes(
     print(code_b.get_code_params())
     return code_a, code_b
 
-def subset_to_array(subset : set[GroupMember],
-                     ) -> npt.NDArray[np.int_]:
+
+def subset_to_array(
+    subset: set[GroupMember],
+) -> npt.NDArray[np.int_]:
     return np.array([s.array_form for s in subset])
 
 
@@ -143,7 +152,7 @@ def random_QTcode(
     group: Group,
     code_a: ClassicalCode,
     save_file: str | None = None,
-    seed:int | None = None,
+    seed: int | None = None,
 ) -> QTCode:
     """Constructs a Quantum Tanner Code over given group using random pair of generators.
     The base codes are code_a and its dual.
@@ -163,5 +172,5 @@ def random_QTcode(
     if save_file:
         array_a = subset_to_array(subset_a)
         array_b = subset_to_array(subset_b)
-        np.savez_compressed(save_file, params=params, array_a= array_a, array_b= array_b)
+        np.savez_compressed(save_file, params=params, array_a=array_a, array_b=array_b)
     return tannercode

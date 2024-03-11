@@ -15,16 +15,10 @@
    limitations under the License.
 """
 
-# import itertools
-# import time
-# import galois
-
-from collections.abc import Sequence
-
 import numpy as np
 
 import qldpc.random_methods as generate
-from qldpc.abstract import CyclicGroup, DihedralGroup, AlternatingGroup, SymmetricGroup, QuaternionGroup
+from qldpc.abstract import CyclicGroup
 from qldpc.codes import ClassicalCode, QTCode
 
 
@@ -33,11 +27,10 @@ def reconstruct_CHcode(
     attempt: int,
     hamming: int | None = None,
     CordaroWagner: int | None = None,
-    file_name=None,
+    file_name: str | None = None,
     field: int = 2,
 ) -> QTCode:
-    """ Reconstructs the cyclic Tanner code from the file. Currently written for Hamming and Cordaro. 
-"""
+    """Reconstructs the cyclic Tanner code from the file. Currently written for Hamming and Cordaro."""
     if file_name:
         file = file_name
     else:
@@ -63,7 +56,7 @@ def reconstruct_CHcode(
     return QTCode(subset_a, subset_b, code_a, code_b, twopartite=False)
 
 
-list_prod = [(2,2), (2,4), (2,2,2), (3,3), (2,6), (2,8), (4,4), (2,2,2,2), (3,6) ]
+list_prod = [(2, 2), (2, 4), (2, 2, 2), (3, 3), (2, 6), (2, 8), (4, 4), (2, 2, 2, 2), (3, 6)]
 list_dihedral = [8, 10, 12, 14, 16, 18, 20]
 list_dicyclic = [8, 12, 16, 20]
 
@@ -74,42 +67,50 @@ field = 2
 hamming = 3
 test = False
 check = False
-#code_a = ClassicalCode.hamming(hamming, field)
+# code_a = ClassicalCode.hamming(hamming, field)
 code_a = ClassicalCode.CordaroWagner(4, field=field)
-#code_a = ClassicalCode.RepSum(blocklength, field=field)
-#group = DihedralGroup(blocklength)
+# code_a = ClassicalCode.RepSum(blocklength, field=field)
+# group = DihedralGroup(blocklength)
 
 
-def test_group_allcodes(ord : int) -> None:
-    list_codes = [(ClassicalCode.hamming(2),"Hamming2"), (ClassicalCode.CordaroWagner(4), "Cordaro4")]
-    list_groups = generate.generate_groups_of_order(ord) 
-    if ord > 6 :
+def test_group_allcodes(order: int) -> None:
+    list_codes = [
+        (ClassicalCode.hamming(2), "Hamming2"),
+        (ClassicalCode.CordaroWagner(4), "Cordaro4"),
+    ]
+    list_groups = generate.generate_groups_of_order(order)
+    if order > 6:
         list_codes = list_codes + [(ClassicalCode.CordaroWagner(5), "Cordaro5")]
-    if ord > 7:
-            list_codes = list_codes + [(ClassicalCode.CordaroWagner(6),"Cordaro6"), (ClassicalCode.RepSum(6), "RepSum6") ]
-    if ord > 9 :
+    if order > 7:
+        list_codes = list_codes + [
+            (ClassicalCode.CordaroWagner(6), "Cordaro6"),
+            (ClassicalCode.RepSum(6), "RepSum6"),
+        ]
+    if order > 9:
         list_codes = list_codes + [(ClassicalCode.hamming(3), "Hamming3")]
     num = len(list_groups)
     for id in range(num):
-        print(f"\nTesting Group of order {ord} with ID {id+1}")
+        print(f"\nTesting Group of order {order} with ID {id+1}")
         for code_a, name in list_codes:
             print(f"Testing using Base Code -- {name}")
             for attempt in range(20):
-                file = f'./experiment_arrays/all_groups/test_group_{ord,id}_{name}_try_{attempt}.npz'
-                generate.random_QTcode(list_groups[id],code_a,save_file=file)
-         
+                file = (
+                    f"./experiment_arrays/all_groups/test_group_{order,id}_{name}_try_{attempt}.npz"
+                )
+                generate.random_QTcode(list_groups[id], code_a, save_file=file)
 
-for ord in range(5,21):    
-    test_group_allcodes(ord)    
+
+for order in range(5, 21):
+    test_group_allcodes(order)
 
 
 if test:
     for blocklength in list_prod[1:]:
         group = generate.generate_cyclicgroup(blocklength)
         for attempt in range(20):
-            file = f'./experiment_arrays/test_prodcycle_{blocklength}_Cordaro4_try_{attempt}.npz'
+            file = f"./experiment_arrays/test_prodcycle_{blocklength}_Cordaro4_try_{attempt}.npz"
             print(f"Testing Product Cyclic Codes of length {blocklength}, try_{attempt}")
-            generate.random_QTcode(group,code_a,save_file=file)
+            generate.random_QTcode(group, code_a, save_file=file)
             # tannercode = reconstruct_CHcode(file, blocklength, hamming=2, field=2)
 
 if check:
