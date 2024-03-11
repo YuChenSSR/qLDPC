@@ -25,12 +25,7 @@ import numpy as np
 import numpy.typing as npt
 
 import qldpc.abstract
-from qldpc.abstract import (
-    CyclicGroup,
-    Group,
-    GroupMember,
-    SymmetricGroup,
-)
+from qldpc.abstract import CyclicGroup, Group, GroupMember, SymmetricGroup
 from qldpc.codes import ClassicalCode, QTCode
 
 
@@ -98,7 +93,6 @@ def generate_groups_of_order(order: int) -> Sequence[Group]:
 
     elif order == 20:
         return [qldpc.abstract.Order20(i) for i in range(1, 6)]
-        
 
 
 # def random_cyclicgens(
