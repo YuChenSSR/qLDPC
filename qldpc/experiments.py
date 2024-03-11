@@ -89,15 +89,15 @@ def test_group_allcodes(order: int) -> None:
     if order > 9:
         list_codes = list_codes + [(ClassicalCode.hamming(3), "Hamming3")]
     num = len(list_groups)
-    for id in range(num):
-        print(f"\nTesting Group of order {order} with ID {id+1}")
+    for ind in range(num):
+        print(f"\nTesting Group of order {order} with ID {ind+1}")
         for code_a, name in list_codes:
             print(f"Testing using Base Code -- {name}")
             for attempt in range(20):
                 file = (
-                    f"./experiment_arrays/all_groups/test_group_{order,id}_{name}_try_{attempt}.npz"
+                    f"./experiment_arrays/all_groups/test_group_{order,ind}_{name}_try_{attempt}.npz"
                 )
-                generate.random_QTcode(list_groups[id], code_a, save_file=file)
+                generate.random_QTcode(list_groups[ind], code_a, save_file=file)
 
 
 for order in range(5, 21):
@@ -114,14 +114,14 @@ if test:
             # tannercode = reconstruct_CHcode(file, blocklength, hamming=2, field=2)
 
 if check:
-    blocklength = 15
+    block = 15
     hamming = 3
     attempt_list = [4, 13, 19]
     # attempt_list = [28]
     # file = f'./experiment_arrays/test_cycle_{blocklength}_Cordaro_try_{attempt}.npz'
     for attempt in attempt_list:
-        print(f"Cordaro -- Blocklength {blocklength}, Attempt {attempt}")
-        code = reconstruct_CHcode(blocklength, attempt, CordaroWagner=6)
+        print(f"Cordaro -- Blocklength {block}, Attempt {attempt}")
+        code = reconstruct_CHcode(block, attempt, CordaroWagner=6)
         params = [
             code.num_qubits,
             code.dimension,

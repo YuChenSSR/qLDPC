@@ -93,7 +93,7 @@ def generate_groups_of_order(order: int) -> Sequence[Group]:
 
     elif order == 20:
         return [qldpc.abstract.Order20(i) for i in range(1, 6)]
-
+    
 
 # def random_cyclicgens(
 #     order: int | Sequence[int], degree: int, seed: int | None = None
