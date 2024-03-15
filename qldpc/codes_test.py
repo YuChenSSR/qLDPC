@@ -14,6 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 """
+
 import itertools
 
 import networkx as nx
@@ -33,14 +34,15 @@ def test_classical_codes() -> None:
     assert codes.ClassicalCode.random(5, 3).num_bits == 5
     assert codes.ClassicalCode.hamming(3).get_distance() == 3
 
-    num_bits = 5
+    num_bits = 2
     for code in [
         codes.ClassicalCode.repetition(num_bits, field=3),
-        codes.ClassicalCode.ring(num_bits, field=4),
+        codes.ClassicalCode.ring(num_bits, field=3),
     ]:
         assert code.num_bits == num_bits
         assert code.dimension == 1
         assert code.get_distance() == num_bits
+        assert code.get_distance(bound=10) == num_bits
         assert code.get_weight() == 2
         assert code.get_random_word() in code
 
@@ -90,6 +92,18 @@ def test_conversions(bits: int = 5, checks: int = 3, field: int = 3) -> None:
     code = get_random_qudit_code(bits, checks, field)
     graph = codes.QuditCode.matrix_to_graph(code.matrix)
     assert np.array_equal(code.matrix, codes.QuditCode.graph_to_matrix(graph))
+
+
+def test_distance_from_classical_code(bits: int = 3) -> None:
+    """Distance of a vector from a classical code."""
+    rep_code = codes.ClassicalCode.repetition(bits, field=2)
+    for vector in itertools.product(rep_code.field.elements, repeat=bits):
+        weight = np.count_nonzero(vector)
+        dist_brute = rep_code.get_distance_exact(vector=vector)
+        dist_bound = rep_code.get_distance(bound=True, vector=vector)
+        assert dist_brute == min(weight, bits - weight)
+        assert dist_brute <= dist_bound
+    assert rep_code.get_distance(brute=False) == bits
 
 
 def test_qubit_code(num_qubits: int = 5, num_checks: int = 3) -> None:
@@ -320,36 +334,45 @@ def test_tanner_code() -> None:
     assert code.num_checks == num_sources * code.subcode.num_checks
 
 
-def test_surface_HGP_code() -> None:
+def test_surface_HGP_codes(distance: int = 2, field: int = 3) -> None:
     """The surface and toric codes as hypergraph product codes."""
     # surface code
-    bit_code = codes.ClassicalCode.repetition(3)
+    bit_code = codes.ClassicalCode.repetition(distance, field=field)
     code = codes.HGPCode(bit_code)
-    assert code.get_code_params() == (13, 1, 3)
+    assert code.num_qudits == distance**2 + (distance - 1) ** 2
+    assert code.dimension == 1
+    assert code.get_distance(bound=10) == distance
 
     # toric code
-    bit_code = codes.ClassicalCode.ring(3)
+    bit_code = codes.ClassicalCode.ring(distance, field=field)
     code = codes.HGPCode(bit_code)
-    assert code.get_code_params() == (18, 2, 3)
+    assert code.num_qudits == 2 * distance**2
+    assert code.dimension == 2
+    assert code.get_distance(bound=10) == distance
+
+    # check that a logical X operator has correct weight when minimzed
+    code.minimize_logical_op(codes.Pauli.X, 0)
+    op = code.get_logical_ops()[codes.Pauli.X.index, 0]
+    assert np.count_nonzero(op) == distance
+
+    # check that the identity operator is a logical operator
+    assert 0 == code.get_distance(codes.Pauli.X, vector=[0] * code.num_qudits)
+    assert 0 == code.get_distance(codes.Pauli.X, vector=[0] * code.num_qudits, bound=True)
 
 
-def test_toric_tanner_code() -> None:
-    """Rotated toric code as a quantum Tanner code.
+def test_toric_tanner_code(size: int = 4) -> None:
+    """Rotated toric code as a quantum Tanner code."""
+    assert size % 2 == 0, "QTCode rotated toric code construction only works for even side lengths"
 
-    This construction only works for cyclic groups of even order.
-    """
-    group = abstract.Group.product(abstract.CyclicGroup(4), repeat=2)
+    group = abstract.Group.product(abstract.CyclicGroup(size), repeat=2)
     shift_x, shift_y = group.generators
     subset_a = [shift_x, ~shift_x]
     subset_b = [shift_y, ~shift_y]
     subcode_a = codes.ClassicalCode.repetition(2, field=2)
-    code = codes.QTCode(subset_a, subset_b, subcode_a)
+    code = codes.QTCode(subset_a, subset_b, subcode_a, bipartite=False)
 
-    # check that this is a [[64, 8, 4]] code
-    assert code.get_code_params() == (64, 8, 4)
-    # assert code.get_distance(lower=True) == 4
-    # assert code.get_distance(upper=100, ensure_nontrivial=True) == 4
-    assert code.get_distance(upper=50, ensure_nontrivial=False) == 4
+    # verify rotated toric code parameters
+    assert code.get_code_params(bound=10) == (size**2, 2, size, 4)
 
     # raise error if constructing QTCode with codes over different fields
     subcode_b = codes.ClassicalCode.repetition(2, field=subcode_a.field.order**2)
@@ -362,18 +385,3 @@ def test_qudit_distance(field: int) -> None:
     """Distance calculations for qudits."""
     code = codes.HGPCode(codes.ClassicalCode.repetition(2, field=field))
     assert code.get_distance() == 2
-    with pytest.raises(ValueError, match="not implemented"):
-        code.get_distance(upper=1)
-
-
-def test_distance_classical() -> None:
-    """Distance test of a vector from a code."""
-    rep_code = codes.ClassicalCode.repetition(3, field=2)
-    vectors = itertools.product(rep_code.field.elements, repeat=3)
-    for vector in list(vectors):
-        vec = rep_code.field(vector)
-        dist_brute = rep_code.distance_bruteforce(vec)
-        dist_upper = rep_code.get_distance(num_trials=2, vector=vec, brute=False)
-        assert dist_brute == min(np.count_nonzero(vec), 3 - np.count_nonzero(vec))
-        assert dist_upper >= dist_brute
-    assert rep_code.get_distance(brute=False) == 3
