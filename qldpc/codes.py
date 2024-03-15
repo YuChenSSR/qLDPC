@@ -38,7 +38,6 @@ if TYPE_CHECKING:
     from typing_extensions import Self
 
 DEFAULT_FIELD_ORDER = abstract.DEFAULT_FIELD_ORDER
-DEFAULT_DISTANCE_TRIALS = 10
 
 
 def get_random_nontrivial_vec(field: type[galois.FieldArray], size: int) -> galois.FieldArray:
@@ -193,29 +192,6 @@ class ClassicalCode(AbstractCode):
         gen_a: npt.NDArray[np.int_] = code_a.generator
         gen_b: npt.NDArray[np.int_] = code_b.generator
         return ~ClassicalCode(np.kron(gen_a, gen_b))
-
-    """
-    # TODO: Test this or suppress
-    @classmethod
-    def test_robustness(cls, code_a: ClassicalCode, code_b: ClassicalCode) -> float:
-        Test if the tensor product C_a ⊗ C_b of two codes C_a and C_b, is robustly-testable.
-        If so, ouput a lower bound on the robustness parameter rho.
-        See definition in  https://arxiv.org/abs/2206.09973
-        tensor_code = ClassicalCode.tensor_product(code_a, code_b)
-        gf = galois.GF(code_a._field_order)
-        n = code_a.num_bits
-        itertools.product(gf.elements, repeat=n * n)
-        rho_estimate = np.inf
-        for x in itertools.product(gf.elements, repeat=n * n):
-            dist_AB = tensor_code.get_distance(vector=gf(x))
-            matrix = gf(x).reshape((n, n))
-            dist_A = np.sum(np.apply_along_axis(code_a.get_distance, axis=1, arr=matrix))
-            dist_B = np.sum(np.apply_along_axis(code_b.get_distance, axis=0, arr=matrix))
-            ratio = (dist_A + dist_B) / (2 * dist_AB)
-            rho_estimate = min(rho_estimate, ratio)
-
-        return rho_estimate
-    """
 
     @property
     def num_checks(self) -> int:
@@ -501,7 +477,7 @@ class QuditCode(AbstractCode):
 
     @property
     def num_qubits(self) -> int:
-        """Number of data qubits in     this code."""
+        """Number of data qubits in this code."""
         self._assert_qubit_code()
         return self.num_qudits
 
@@ -515,12 +491,6 @@ class QuditCode(AbstractCode):
         matrix_z = self.matrix[:, self.num_qudits :].view(np.ndarray)
         matrix = matrix_x + matrix_z  # nonzero wherever a check addresses a qudit
         return max(np.count_nonzero(row) for row in matrix)
-
-    def get_weight(self) -> int:
-        """Compute the weight of the largest check."""
-        row_max = np.max([np.count_nonzero(self.matrix[i, :]) for i in range(self.matrix.shape[0])])
-        col_max = np.max([np.count_nonzero(self.matrix[:, i]) for i in range(self.matrix.shape[1])])
-        return max(row_max, col_max)
 
     @classmethod
     def matrix_to_graph(cls, matrix: npt.NDArray[np.int_] | Sequence[Sequence[int]]) -> nx.DiGraph:
@@ -930,8 +900,6 @@ class CSSCode(QuditCode):
         qudit_locs = np.hstack([qudit_locs[other_z], qudit_locs[pivot_z]])
 
         # run some sanity checks
-        # print(pivot_z[-1])
-        # print(len(pivot_x))
         assert pivot_z[-1] < num_qudits - len(pivot_x)
         assert dimension + len(pivot_x) + len(pivot_z) == num_qudits
 
@@ -1402,20 +1370,12 @@ class TannerCode(ClassicalCode):
         sinks = [node for node in subgraph if subgraph.out_degree(node) == 0]
         sink_indices = {sink: idx for idx, sink in enumerate(sorted(sinks))}
 
-        # print()
-        # matrix = nx.adjacency_matrix(subgraph).toarray()
-        # print(matrix.shape)
-        # print(matrix)
-
         num_bits = len(sinks)
         num_checks = len(sources) * subcode.num_checks
         matrix = np.zeros((num_checks, num_bits), dtype=int)
         for idx, source in enumerate(sorted(sources)):
             checks = range(subcode.num_checks * idx, subcode.num_checks * (idx + 1))
             bits = [sink_indices[sink] for sink in self._get_sorted_neighbors(source)]
-            # print()
-            # print(len(bits))
-            # print(len(list(subgraph.neighbors(source))))
             matrix[np.ix_(checks, bits)] = subcode.matrix
         ClassicalCode.__init__(self, matrix, subcode.field.order)
 
@@ -1458,7 +1418,6 @@ class QTCode(CSSCode):
         code_a: ClassicalCode | npt.NDArray[np.int_] | Sequence[Sequence[int]],
         code_b: ClassicalCode | npt.NDArray[np.int_] | Sequence[Sequence[int]] | None = None,
         field: int | None = None,
-        twopartite: bool | None = False,
         *,
         bipartite: bool = False,
         conjugate: slice | Sequence[int] | None = (),
