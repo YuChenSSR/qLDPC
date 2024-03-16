@@ -947,12 +947,12 @@ class CSSCode(QuditCode):
 
         return op_a
 
-    def minimize_logical_op(
+    def reduce_logical_op(
         self, pauli: Literal[Pauli.X, Pauli.Z], logical_index: int, **decoder_args: object
     ) -> None:
-        """Minimize the weight of a logical operator.
+        """Reduce the weight of a logical operator.
 
-        A minimum-weight logical operator is found by enforcing that it has a trivial syndrome, and
+        A minimal-weight logical operator is found by enforcing that it has a trivial syndrome, and
         that it commutes with all logical operators except its dual.  This is essentially the same
         method as that used in CSSCode.get_one_distance_bound.
         """
@@ -980,6 +980,18 @@ class CSSCode(QuditCode):
 
         assert self._logical_ops is not None
         self._logical_ops[pauli.index, logical_index] = candidate_logical_op
+
+    def reduce_logical_ops(
+        self, pauli: Literal[Pauli.X, Pauli.Z] | None = None, **decoder_args: object
+    ) -> None:
+        """Reduce the weight of all logical operators."""
+        assert pauli in [None, Pauli.X, Pauli.Z]
+        if pauli is None:
+            self.reduce_logical_ops(Pauli.X, **decoder_args)
+            self.reduce_logical_ops(Pauli.Z, **decoder_args)
+        else:
+            for logical_index in range(self.dimension):
+                self.reduce_logical_op(pauli, logical_index, **decoder_args)
 
 
 ################################################################################
@@ -1162,27 +1174,37 @@ class HGPCode(CSSCode):
         code_b = ClassicalCode(code_b, field)
         field = code_a.field.order
 
+        # use a matrix-based hypergraph product to identify X-sector and Z-sector parity checks
+        matrix_x, matrix_z = HGPCode.get_matrix_product(code_a.matrix, code_b.matrix)
+
         # identify the number of qudits in each sector
         self.sector_size = np.outer(
             [code_a.num_bits, code_a.num_checks],
             [code_b.num_bits, code_b.num_checks],
         )
+
+        # identify which qudits to conjugate (Hadamard-transform)
         qudits_to_conjugate = slice(self.sector_size[0, 0], None) if conjugate else None
 
-        # construct the nontrivial blocks of the parity check matrices
-        matrix_a = code_a.matrix
-        matrix_b = code_b.matrix
+        CSSCode.__init__(
+            self, matrix_x, matrix_z, field, conjugate=qudits_to_conjugate, skip_validation=True
+        )
+
+    @classmethod
+    def get_matrix_product(
+        cls, matrix_a: npt.NDArray[np.int_], matrix_b: npt.NDArray[np.int_]
+    ) -> nx.DiGraph:
+        """Hypergraph product of two parity check matrices."""
+        # construct the nontrivial blocks of the final parity check matrices
         mat_H1_In2 = np.kron(matrix_a, np.eye(matrix_b.shape[1], dtype=int))
         mat_In1_H2 = np.kron(np.eye(matrix_a.shape[1], dtype=int), matrix_b)
         mat_H1_Im2_T = np.kron(matrix_a.T, np.eye(matrix_b.shape[0], dtype=int))
         mat_Im1_H2_T = np.kron(np.eye(matrix_a.shape[0], dtype=int), matrix_b.T)
 
-        # construct the parity check matrices
+        # construct the X-sector and Z-sector parity check matrices
         matrix_x = np.block([mat_H1_In2, -mat_Im1_H2_T])
         matrix_z = np.block([mat_In1_H2, mat_H1_Im2_T])
-        CSSCode.__init__(
-            self, matrix_x, matrix_z, field, conjugate=qudits_to_conjugate, skip_validation=True
-        )
+        return matrix_x, matrix_z
 
     @classmethod
     def get_graph_product(
@@ -1262,12 +1284,14 @@ class LPCode(CSSCode):
 
     A lifted product code is essentially the same as a hypergraph product code, except that the
     parity check matrices are "protographs", or matrices whose entries are members of a group
-    algebra over the field {0, 1}.  Each of these entries can be "lifted" to a representation as
-    orthogonal matrices over a finite field, in which case the protograph is interpreted as a block
-    matrix; this is called "lifting" the protograph.
+    algebra over the field Z_2 ~ {0,1}.  Each of these entries can be "lifted" to a representation
+    as orthogonal matrices over a finite field, in which case the protograph is interpreted as a
+    block matrix; this is called "lifting" the protograph.
 
     Notes:
     - A lifted product code with protographs of size 1×1 is a generalized bicycle code.
+    - A lifted product code with protographs whose entries get lifted to 1×1 matrices is a
+        hypergraph product code of the lifted protographs.
 
     References:
     - https://errorcorrectionzoo.org/c/lifted_product
@@ -1284,7 +1308,34 @@ class LPCode(CSSCode):
         *,
         conjugate: bool = False,
     ) -> None:
-        """Same hypergraph product as in the HGPCode, but with protographs.
+        """Lifted product of two protographs, as in arXiv:2012.04068."""
+        if protograph_b is None:
+            protograph_b = protograph_a
+        protograph_a = abstract.Protograph(protograph_a)
+        protograph_b = abstract.Protograph(protograph_b)
+        field = protograph_a.field.order
+
+        # identify X-sector and Z-sector parity checks
+        matrix_x, matrix_z = LPCode.get_matrix_product(protograph_a, protograph_b)
+
+        # identify the number of qudits in each sector
+        self.sector_size = protograph_a.group.lift_dim * np.outer(
+            protograph_a.shape[::-1],
+            protograph_b.shape[::-1],
+        )
+
+        # identify which qudits to conjugate (Hadamard-transform)
+        qudits_to_conjugate = slice(self.sector_size[0, 0], None) if conjugate else None
+
+        CSSCode.__init__(
+            self, matrix_x, matrix_z, field, conjugate=qudits_to_conjugate, skip_validation=True
+        )
+
+    @classmethod
+    def get_matrix_product(
+        cls, protograph_a: abstract.Protograph, protograph_b: abstract.Protograph
+    ) -> nx.DiGraph:
+        """Matrix-based hypergraph product similar to that in HGPCode, but with protographs.
 
         There is one crucial subtlety when computing the hypergraph product of protographs.  When
         taking the transpose of a protograph, P --> P.T, we also need to transpose the individual
@@ -1298,37 +1349,22 @@ class LPCode(CSSCode):
         this reason, we need to take the transpose of a protograph "manually" when using it for the
         hypergraph product.
         """
-        if protograph_b is None:
-            protograph_b = protograph_a
-        protograph_a = abstract.Protograph(protograph_a)
-        protograph_b = abstract.Protograph(protograph_b)
-        field = protograph_a.field.order
-
-        # identify the number of qudits in each sector
-        self.sector_size = protograph_a.group.lift_dim * np.outer(
-            protograph_a.shape[::-1],
-            protograph_b.shape[::-1],
-        )
-        qudits_to_conjugate = slice(self.sector_size[0, 0], None) if conjugate else None
-
         # identify sub-matrices and their transposes
         matrix_a = protograph_a.matrix
         matrix_b = protograph_b.matrix
         matrix_a_T = protograph_a.T.matrix
         matrix_b_T = protograph_b.T.matrix
 
-        # construct the nontrivial blocks in the matrix
+        # construct the nontrivial blocks of the final parity check matrices
         mat_H1_In2 = np.kron(matrix_a, np.eye(matrix_b.shape[1], dtype=int))
         mat_In1_H2 = np.kron(np.eye(matrix_a.shape[1], dtype=int), matrix_b)
         mat_H1_Im2_T = np.kron(matrix_a_T, np.eye(matrix_b.shape[0], dtype=int))
         mat_Im1_H2_T = np.kron(np.eye(matrix_a.shape[0], dtype=int), matrix_b_T)
 
-        # construct the parity check matrices
+        # construct the X-sector and Z-sector parity check matrices
         matrix_x = abstract.Protograph(np.block([mat_H1_In2, -mat_Im1_H2_T])).lift()
         matrix_z = abstract.Protograph(np.block([mat_In1_H2, mat_H1_Im2_T])).lift()
-        CSSCode.__init__(
-            self, matrix_x, matrix_z, field, conjugate=qudits_to_conjugate, skip_validation=True
-        )
+        return matrix_x, matrix_z
 
 
 ################################################################################
