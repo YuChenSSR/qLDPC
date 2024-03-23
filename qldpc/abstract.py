@@ -391,27 +391,6 @@ class Group:
         return Group(group)
 
 
-class SmallGroup(Group):
-    """Group indexed by the GAP computer algebra system."""
-
-    def __init__(self, order: int, index: int) -> None:
-        name = f"SmallGroup({order},{index})"
-        super().__init__(Group.from_name(name))
-
-
-def get_small_groups(order: int) -> Iterator[SmallGroup]:
-    """Iterator over all groups of a given order."""
-    index = 1
-    while True:
-        try:
-            yield SmallGroup(order, index)
-        except ValueError as error:
-            message = str(error)
-            if "not recognized" in message or "not found" in message:
-                break
-            raise error
-
-
 ################################################################################
 # elements of a group algebra
 
@@ -730,6 +709,26 @@ class QuaternionGroup(Group):
 
         group = Group.from_table(table, integer_lift=lift)
         super().__init__(group._group, field=3, lift=group._lift)
+
+
+class SmallGroup(Group):
+    """Group indexed by the GAP computer algebra system."""
+
+    def __init__(self, order: int, index: int) -> None:
+        num_groups = SmallGroup.number(order)
+        if not 1 <= index <= num_groups:
+            raise ValueError(
+                f"Index for SmallGroup of order {order} must be between 1 and {num_groups}"
+                + f" (provided: {index})"
+            )
+
+        name = f"SmallGroup({order},{index})"
+        super().__init__(Group.from_name(name))
+
+    @classmethod
+    def number(cls, order: int) -> int:
+        """The number of groups of a given order."""
+        return named_groups.get_small_group_number(order)
 
 
 ################################################################################
