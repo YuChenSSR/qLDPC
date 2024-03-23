@@ -94,9 +94,7 @@ def test_group_allcodes(order: int) -> None:
         for code_a, name in list_codes:
             print(f"Testing using Base Code -- {name}")
             for attempt in range(20):
-                file = (
-                    f"./experiment_arrays/all_groups/test_group_{order,ind}_{name}_try_{attempt}.npz"
-                )
+                file = f"./experiment_arrays/all_groups/test_group_{order,ind}_{name}_try_{attempt}.npz"
                 generate.random_QTcode(list_groups[ind], code_a, save_file=file)
 
 

@@ -93,28 +93,6 @@ def generate_groups_of_order(order: int) -> Sequence[Group]:
 
     elif order == 20:
         return [qldpc.abstract.Order20(i) for i in range(1, 6)]
-    
-
-# def random_cyclicgens(
-#     order: int | Sequence[int], degree: int, seed: int | None = None
-# ) -> tuple[Group, set[GroupMember], set[GroupMember], npt.NDArray[np.int_]| None]:
-#     """Generates a pair of random subsets of a cyclic group or a product of cyclic groups.
-#     Order: Can be an integer k --> Z_k or a tuple,
-#             (k_1,k_2, ... , k_r) --> Z_{k_1} x ... x Z_{k_r}
-#     degree: The size of the subsets (both equal to degree)
-#     """
-#     cyclegroup: CyclicGroup | Group
-#     cyclegroup = generate_cyclicgroup(order)
-#     subset_a = cyclegroup.random_symmetric_subset(degree, seed=seed)
-#     subset_b = cyclegroup.random_symmetric_subset(degree, seed=seed)
-#     print(f"Quantum Tanner Code over Cyclic group of order {order} with {degree} generators")
-#     if isinstance(order, int):
-#         # print("Generators")
-#         generators = np.array([[p(0) for p in subset_a], [p(0) for p in subset_b]])
-#         # print(generators)
-#     else:
-#         generators = None
-#     return cyclegroup, subset_a, subset_b, generators
 
 
 def random_basecodes(
