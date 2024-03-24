@@ -51,8 +51,8 @@ gen[:, [2, 4]] = gen[:, [4, 2]]  # permute columns/bits
 assert np.array_equal(CordaroWagner(5).generator, gen)
 assert np.array_equal(RepSum(5).generator, gen)
 
-# gen = qldpc.codes.CordaroWagnerCode(6).generator
-# assert np.array_equal(CordaroWagner(6).generator, gen)
+gen = qldpc.codes.CordaroWagnerCode(6).generator
+assert np.array_equal(CordaroWagner(6).generator, gen)
 
 gen = modified_hamming(6).generator
 gen[:, [3, 5]] = gen[:, [5, 3]]  # permute columns/bits
