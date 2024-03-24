@@ -105,6 +105,18 @@ list_dihedral = [8, 10, 12, 14, 16, 18, 20]
 list_dicyclic = [8, 12, 16, 20]
 
 
+def modified_hamming(length: int, field: int | None = None) -> codes.ClassicalCode:
+    """Modified Hammming codes."""
+    base_code = codes.HammingCode(3, field=field)
+    if length == 4:
+        return base_code.shorten(2, 3).puncture(4)
+    if length == 5:
+        return base_code.shorten(2, 3)
+    if length == 6:
+        return base_code.shorten(3)
+    raise ValueError(f"Unrecognized length for modified Hamming code: {length}")
+
+
 np.set_printoptions(linewidth=200)
 
 hamming = 3
