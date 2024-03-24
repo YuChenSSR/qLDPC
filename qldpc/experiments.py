@@ -16,8 +16,54 @@
 """
 
 import numpy as np
+import numpy.typing as npt
 
-from qldpc import abstract, codes, random_methods
+from qldpc import abstract, codes
+
+
+def random_base_codes(
+    blocklength: int,
+) -> tuple[codes.ClassicalCode, codes.ClassicalCode]:
+    """Outputs a pair of random linear codes C_A, C_B such that
+    dim(C_A) + dim(C_B) = blocklength
+    """
+    rate = 0.4
+    checks = blocklength - int((rate * blocklength))
+    checks = 3
+    print("Inner Code is random linear and its dual")
+    code_a = codes.ClassicalCode.random(blocklength, checks)
+    code_b = ~code_a
+    print("Inner code params:")
+    print(code_a.get_code_params())
+    print(code_b.get_code_params())
+    return code_a, code_b
+
+
+def random_quantum_tanner(
+    group: abstract.Group,
+    inner_code: codes.ClassicalCode,
+    save_file: str | None = None,
+    seed: int | None = None,
+) -> codes.QTCode:
+    """Constructs a Quantum Tanner Code over given group using random pair of generators.
+    The base codes are code_a and its dual.
+    """
+    subset_a = group.random_symmetric_subset(inner_code.num_bits, seed=seed)
+    subset_b = group.random_symmetric_subset(inner_code.num_bits, seed=seed)
+    code = codes.QTCode(subset_a, subset_b, inner_code, ~inner_code)
+    params = code.get_code_params(bound=500)
+    print("Final code params:", params)
+    if save_file:
+        array_a = subset_to_array(subset_a)
+        array_b = subset_to_array(subset_b)
+        np.savez_compressed(save_file, params=params, array_a=array_a, array_b=array_b)
+    return code
+
+
+def subset_to_array(
+    subset: set[abstract.GroupMember],
+) -> npt.NDArray[np.int_]:
+    return np.array([s.array_form for s in subset])
 
 
 def reconstruct_CHcode(
@@ -26,7 +72,6 @@ def reconstruct_CHcode(
     hamming: int | None = None,
     CordaroWagner: int | None = None,
     file_name: str | None = None,
-    field: int = 2,
 ) -> codes.QTCode:
     """Reconstructs the cyclic Tanner code from the file. Currently written for Hamming and Cordaro."""
     if file_name:
@@ -47,10 +92,10 @@ def reconstruct_CHcode(
     print(list(np.sort(gen_b)))
     code_a: codes.ClassicalCode
     if hamming:
-        code_a = codes.HammingCode(hamming, field)
+        code_a = codes.HammingCode(hamming)
         code_b = ~code_a
     if CordaroWagner:
-        code_a = codes.CordaroWagnerCode(CordaroWagner, field=2)
+        code_a = codes.CordaroWagnerCode(CordaroWagner)
         code_b = ~code_a
     return codes.QTCode(subset_a, subset_b, code_a, code_b, bipartite=False)
 
@@ -62,13 +107,12 @@ list_dicyclic = [8, 12, 16, 20]
 
 np.set_printoptions(linewidth=200)
 
-field = 2
 hamming = 3
 test = False
 check = False
-# code_a = codes.ClassicalCode.hamming(hamming, field)
-code_a = codes.CordaroWagnerCode(4, field=field)
-# code_a = codes.ClassicalCode.RepSum(blocklength, field=field)
+# code_a = codes.ClassicalCode.hamming(hamming)
+code_a = codes.CordaroWagnerCode(4)
+# code_a = codes.ClassicalCode.RepSum(blocklength)
 # group = DihedralGroup(blocklength)
 
 
@@ -94,7 +138,7 @@ def test_group_allcodes(order: int) -> None:
             print(f"Testing using Base Code -- {name}")
             for attempt in range(20):
                 file = f"./experiment_arrays/all_groups/test_group_{order,ind}_{name}_try_{attempt}.npz"
-                random_methods.random_QTcode(list_groups[ind], code_a, save_file=file)
+                random_quantum_tanner(list_groups[ind], code_a, save_file=file)
 
 
 for order in range(5, 21):
@@ -107,8 +151,8 @@ if test:
         for attempt in range(20):
             file = f"./experiment_arrays/test_prodcycle_{blocklength}_Cordaro4_try_{attempt}.npz"
             print(f"Testing Product Cyclic Codes of length {blocklength}, try_{attempt}")
-            random_methods.random_QTcode(group, code_a, save_file=file)
-            # tannercode = reconstruct_CHcode(file, blocklength, hamming=2, field=2)
+            random_quantum_tanner(group, code_a, save_file=file)
+            # tannercode = reconstruct_CHcode(file, blocklength, hamming=2)
 
 if check:
     block = 15
