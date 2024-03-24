@@ -123,14 +123,14 @@ def test_group_allcodes(order: int) -> None:
     ]
     list_groups = list(abstract.SmallGroup.generator(order))
     if order > 6:
-        list_codes = list_codes + [(codes.CordaroWagnerCode(5), "Cordaro5")]
+        list_codes += [(codes.CordaroWagnerCode(5), "Cordaro5")]
     if order > 7:
-        list_codes = list_codes + [
+        list_codes += [
             (codes.CordaroWagnerCode(6), "Cordaro6"),
             (codes.RepSumCode(6), "RepSum6"),
         ]
     if order > 9:
-        list_codes = list_codes + [(codes.HammingCode(3), "Hamming3")]
+        list_codes += [(codes.HammingCode(3), "Hamming3")]
     num = len(list_groups)
     for ind in range(num):
         print(f"\nTesting Group of order {order} with ID {ind+1}")
