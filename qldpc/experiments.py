@@ -72,18 +72,12 @@ code_a = codes.CordaroWagnerCode(4, field=field)
 # group = DihedralGroup(blocklength)
 
 
-def get_small_groups(order: int) -> list[abstract.SmallGroup]:
-    return [
-        abstract.SmallGroup(order, index + 1) for index in range(abstract.SmallGroup.number(order))
-    ]
-
-
 def test_group_allcodes(order: int) -> None:
     list_codes = [
         (codes.HammingCode(2), "Hamming2"),
         (codes.CordaroWagnerCode(4), "Cordaro4"),
     ]
-    list_groups = get_small_groups(order)
+    list_groups = list(abstract.SmallGroup.generator(order))
     if order > 6:
         list_codes = list_codes + [(codes.CordaroWagnerCode(5), "Cordaro5")]
     if order > 7:
