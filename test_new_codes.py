@@ -31,7 +31,7 @@ def RepSum(length: int, field: int | None = None) -> qldpc.codes.ClassicalCode:
 
 
 def modified_hamming(length: int, field: int | None = None) -> qldpc.codes.ClassicalCode:
-    """Modified Hammming qldpc.codes."""
+    """Modified Hammming codes."""
     code = qldpc.codes.HammingCode(3, field=field)
     if length == 4:
         return code.shorten(2, 3).puncture(4)
