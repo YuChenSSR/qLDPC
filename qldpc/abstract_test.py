@@ -59,7 +59,8 @@ def test_lift() -> None:
     """Lift named group elements."""
     assert_valid_lift(abstract.TrivialGroup())
     assert_valid_lift(abstract.CyclicGroup(3))
-    assert_valid_lift(abstract.AbelianGroup(2, 2))
+    assert_valid_lift(abstract.AbelianGroup(2, 3))
+    assert_valid_lift(abstract.AbelianGroup(2, 3, product_lift=True))
     assert_valid_lift(abstract.DihedralGroup(3))
     assert_valid_lift(abstract.AlternatingGroup(3))
     assert_valid_lift(abstract.SymmetricGroup(3))
@@ -106,7 +107,7 @@ def test_algebra() -> None:
     zero = abstract.Element(group)
     one = abstract.Element(group).one()
     assert zero.group == group
-    assert one + one + one == group.identity + 2 * one == -one + one == one - one == zero
+    assert one + 2 == group.identity + 2 * one == -one + 1 == one - 1 == zero
     assert group.identity * one == one * group.identity == one**2 == one
     assert np.array_equal(zero.lift(), np.array(0, ndmin=2))
     assert np.array_equal(one.lift(), np.array(1, ndmin=2))
@@ -117,10 +118,17 @@ def test_protograph() -> None:
     matrix = np.random.randint(2, size=(3, 3))
     protograph = abstract.TrivialGroup.to_protograph(matrix)
     assert protograph.group == abstract.TrivialGroup()
-    assert 1 * protograph == protograph * 1 == protograph
-    assert protograph == abstract.Protograph(protograph)
-    assert np.array_equal(protograph.lift(), matrix)
     assert protograph.field == abstract.TrivialGroup().field
+    assert np.array_equal(protograph.lift(), matrix)
+
+    # fail to construct a valid protograph
+    with pytest.raises(ValueError, match="must be Element-valued"):
+        abstract.Protograph([[0]])
+    with pytest.raises(ValueError, match="Inconsistent base groups"):
+        groups = [abstract.TrivialGroup(), abstract.CyclicGroup(1)]
+        abstract.Protograph([[abstract.Element(group) for group in groups]])
+    with pytest.raises(ValueError, match="Cannot determine underlying group"):
+        abstract.Protograph([])
 
 
 def test_transpose() -> None:
@@ -133,7 +141,7 @@ def test_transpose() -> None:
     x0, x1, x2, x3 = group.generate()
     matrix = [[x0, 0, x1], [x2, 0, x3]]
     protograph = abstract.Protograph.build(group, matrix)
-    assert protograph.T.T == protograph
+    assert np.array_equal(protograph.T.T, protograph)
 
 
 def test_random_symmetric_subset() -> None:
